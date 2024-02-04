@@ -147,7 +147,7 @@ form{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:#004080;
+    background-color:#F9EFE1;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -203,7 +203,7 @@ form{
         display: block;
     }
     .search{
-        width: 20rem;
+        width: 17rem;
     }
     .pos{
         bottom: 0;

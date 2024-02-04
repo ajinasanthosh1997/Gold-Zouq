@@ -116,8 +116,8 @@
     <header id="hd1">
         <div class="res">
             <div>
-                <div style="width:2rem;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
-                <div>menu</div>
+                <div style="width:2rem;#63392C;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
+                <div style="color: #63392C;">Menu</div>
             </div>
             <img src="assets/img/gold-zouq.svg" class="res-img">
             <div class="">
@@ -129,18 +129,21 @@
                 <div>Calculator</div>
             </div>
         </div>
-        <form action="/search" method="get">
-            <div class="search-container">
-                <img src="assets/img/search.svg" class="icon">
-                <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
-            </div>
-        </form>
+        <div style="display: flex;justify-content: center;">
+            <form action="/search" method="get">
+                <div class="search-container">
+                    <img src="assets/img/search.svg" class="icon">
+                    <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+                </div>
+            </form>
+        </div>
+        
         <div class="pos"></div>
     </header>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <ul>
-            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'dashboard' %}"></a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'authentication:logout' %}">Logout</a></li>
