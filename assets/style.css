@@ -209,5 +209,39 @@ form{
         bottom: 0;
         top:1rem;
     }
+    .nav-link:hover {
+        /* color: transparent; */
+    }
+    .nav{
+        display: block;
+    }
+    
+    .nav-link:hover::after {
+        transform: scaleX(0); /* Set the underline to be hidden */
+        
+
+    }
+    .hd-flex{
+        display: block;
+    }
+    .nav-link.selected::after {
+        transform: scaleX(0);
+        color: black;
+        transform-origin: bottom left;
+    }
+    .res-flex{
+        display: flex;
+
+    }
+    .nav-link.selected {
+        color: black; /* Black text color when selected */
+        font-weight: bold; /* Increase font weight when selected */
+    }
+    .nav-link::after {
+        content: ' >';
+    }
+    .nav-link:last-child::after {
+        content: ''; /* Remove ">" from the last nav-link */
+    }
     
 }

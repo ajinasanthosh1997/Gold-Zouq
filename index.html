@@ -7,66 +7,65 @@
     <link rel="stylesheet" href="assets/style.css">
     <link href="https://api.fontshare.com/v2/css?f[]=switzer@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-TsZ0HJ5un8EftmqUcR2RbC5apQxYo1P0ZcxNiiwOJOPTeD7NdmAuRbPw+8RIq7AH9eJhavZRMydrbI9zCuPR4w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-TsZ0HJ5un8EftmqUcR2RbC5apQxYo1P0ZcxNiiwOJOPTeD7NdmAuRbPw+8RIq7AH9eJhavZRMydrbI9zCuPR4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <header id="hd">
-        <div class="flex">
-            <div>
-                <img src="assets/img/gold-zouq.svg" class="hd-img">
-            </div>
-            <div>
-                <div class="header" >
-            
-                    <nav class="nav">
-                        <a href="#" class="nav-link selected" onclick="showContent('gold')">GOLD</a>
-                        <a href="#" class="nav-link" onclick="showContent('diamond')">DIAMOND</a>
-                        <a href="#" class="nav-link" onclick="showContent('weddingRings')">WEDDING RINGS</a>
-                    </nav>
-                    <form action="/search" method="get">
-                        <div class="search-container">
-                            <img src="assets/img/search.svg" class="icon">
-                            <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
-                        </div>
-                    </form>
-                    <div class="hd-div">
-                        <div class="box">
-                            <img src="assets/img/user.svg">
-                            <div>User</div>
-                        </div>
-                        <div class="box1">
-                            <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
-                            <div>Calculator</div>
-                        </div>
+<header id="hd">
+    <div class="flex">
+        <div>
+            <img src="assets/img/gold-zouq.svg" class="hd-img">
+        </div>
+        <div>
+            <div class="header">
+                <nav class="nav">
+                    <a href="#" class="nav-link selected" onclick="showContent('gold', 'main')">GOLD</a>
+                    <a href="#" class="nav-link" onclick="showContent('diamond', 'main')">DIAMOND</a>
+                    <a href="#" class="nav-link" onclick="showContent('weddingRings', 'main')">WEDDING RINGS</a>
+                </nav>
+                <form action="/search" method="get">
+                    <div class="search-container">
+                        <img src="assets/img/search.svg" class="icon">
+                        <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+                    </div>
+                </form>
+                <div class="hd-div">
+                    <div class="box">
+                        <img src="assets/img/user.svg">
+                        <div>User</div>
+                    </div>
+                    <div class="box1">
+                        <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
+                        <div>Calculator</div>
                     </div>
                 </div>
-                <div id="selectedContent" class="hd-flex">
-                    <!-- Default content for the selected item -->
-                    <div>Bangle</div>
-                    <div>Bracelet</div>
-                    <div>Chain</div>
-                    <div>Necklace</div>
-                    <div>Pendant</div>
-                    <div>Ring</div>
-                    <div>Studs</div>
-                </div>
+            </div>
+            <div id="selectedContentMain" class="hd-flex">
+                <!-- Default content for the selected item -->
+                <div>Bangle</div>
+                <div>Bracelet</div>
+                <div>Chain</div>
+                <div>Necklace</div>
+                <div>Pendant</div>
+                <div>Ring</div>
+                <div>Studs</div>
+            </div>
 
             <script>
                 // Show the default content (gold) when the page loads
-                window.onload = function() {
-                    showContent('gold');
+                window.onload = function () {
+                    showContent('gold', 'main');
                 };
 
-                function showContent(contentType) {
+                function showContent(contentType, navType) {
                     // Remove the 'selected' class from all nav-links
                     document.querySelectorAll('.nav-link').forEach(function (link) {
                         link.classList.remove('selected');
                     });
 
                     // Add the 'selected' class to the clicked nav-link
-                    var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\')"]');
+                    var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
                     selectedLink.classList.add('selected');
 
                     // Create the selected content dynamically
@@ -100,67 +99,160 @@
                     }
 
                     // Update the selected content area
-                    var selectedContentArea = document.getElementById('selectedContent');
+                    var selectedContentArea = document.getElementById('selectedContent' + (navType === 'main' ? 'Main' : 'Responsive'));
                     selectedContentArea.innerHTML = selectedContent;
                 }
             </script>
-            
-            </div>
 
-            <!-- Display area for selected content -->
-            
         </div>
-        
-        <div class="pos"></div> 
-    </header>
-    <header id="hd1">
-        <div class="res">
-            <div>
-                <div style="width:2rem;color:#63392C;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
-                <div style="color: #63392C;">Menu</div>
-            </div>
-            <img src="assets/img/gold-zouq.svg" class="res-img">
-            <div class="">
-                <img src="assets/img/user.svg">
-                <div>User</div>
-            </div>
-            <div class="">
-                <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
-                <div>Calculator</div>
-            </div>
+
+        <!-- Display area for selected content -->
+
+    </div>
+
+    <div class="pos"></div>
+</header>
+<header id="hd1">
+    <div class="res">
+        <div>
+            <div style="width:2rem;color:#63392C;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
+            <div style="color: #63392C;">Menu</div>
         </div>
-        <div style="display: flex;justify-content: center;">
-            <form action="/search" method="get">
-                <div class="search-container">
-                    <img src="assets/img/search.svg" class="icon">
-                    <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
-                </div>
-            </form>
+        <img src="assets/img/gold-zouq.svg" class="res-img">
+        <div class="">
+            <img src="assets/img/user.svg">
+            <div>User</div>
         </div>
-        
-        <div class="pos"></div>
-    </header>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <ul>
-            <li><a href="{% url 'dashboard' %}"></a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'authentication:logout' %}">Logout</a></li>
-            {% endif %}
-            <!-- Add more navigation links as needed -->
-            
-        </ul>
+        <div class="">
+            <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
+            <div>Calculator</div>
+        </div>
+    </div>
+    <div style="display: flex;justify-content: center;">
+        <form action="/search" method="get">
+            <div class="search-container">
+                <img src="assets/img/search.svg" class="icon">
+                <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+            </div>
+        </form>
+    </div>
+
+    <div class="pos"></div>
+</header>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="res-flex">
+        <nav class="nav">
+            <a href="#" class="nav-link selected" onclick="showContent('gold', 'responsive')">GOLD</a>
+            <a href="#" class="nav-link" onclick="showContent('diamond', 'responsive')">DIAMOND</a>
+            <a href="#" class="nav-link" onclick="showContent('weddingRings', 'responsive')">WEDDING RINGS</a>
+        </nav>
+        <div id="selectedContentResponsive" class="hd-flex">
+            <!-- Default content for the selected item -->
+            <div>Bangle</div>
+            <div>Bracelet</div>
+            <div>Chain</div>
+            <div>Necklace</div>
+            <div>Pendant</div>
+            <div>Ring</div>
+            <div>Studs</div>
+        </div>
+
     </div>
     <script>
-        function toggleNav() {
-            document.getElementById("mySidenav").style.width = "100%";
-        }
+        // Show the default content (gold) when the page loads
+        window.onload = function () {
+            showContent('gold', 'responsive');
+        };
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
+        function showContent(contentType, navType) {
+            // Remove the 'selected' class from all nav-links (Main Navigation)
+            document.querySelectorAll('.nav-link').forEach(function (link) {
+                link.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the clicked nav-link (Main Navigation)
+            var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+            selectedLink.classList.add('selected');
+
+            // Create the selected content dynamically (Main Navigation)
+            var selectedContentMain;
+            switch (contentType) {
+                case 'gold':
+                    selectedContentMain = `
+                            <div>Bangle</div>
+                            <div>Bracelet</div>
+                            <div>Chain</div>
+                            <div>Necklace</div>
+                            <div>Pendant</div>
+                            <div>Ring</div>
+                            <div>Studs</div>
+                        `;
+                    break;
+                case 'diamond':
+                    selectedContentMain = `
+                            <div>Bangle</div>
+                            <div>Bracelet</div>
+                            <div>Pendant</div>
+                            <div>Ring</div>
+                            <div>Studs</div>
+                        `;
+                    break;
+                case 'weddingRings':
+                    selectedContentMain = '<div>Gold Ring</div>';
+                    break;
+                default:
+                    selectedContentMain = '';
+            }
+
+            // Update the selected content area (Main Navigation)
+            var selectedContentAreaMain = document.getElementById('selectedContentMain');
+            selectedContentAreaMain.innerHTML = selectedContentMain;
+
+            // Remove the 'selected' class from all nav-links (Responsive Navigation)
+            document.querySelectorAll('.nav-link').forEach(function (link) {
+                link.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the clicked nav-link (Responsive Navigation)
+            var selectedLinkResponsive = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+            selectedLinkResponsive.classList.add('selected');
+
+            // Create the selected content dynamically (Responsive Navigation)
+            var selectedContentResponsive;
+            switch (contentType) {
+                case 'gold':
+                    selectedContentResponsive = `
+                            <div>Bangle</div>
+                            <div>Bracelet</div>
+                            <div>Chain</div>
+                            <div>Necklace</div>
+                            <div>Pendant</div>
+                            <div>Ring</div>
+                            <div>Studs</div>
+                        `;
+                    break;
+                case 'diamond':
+                    selectedContentResponsive = `
+                            <div>Bangle</div>
+                            <div>Bracelet</div>
+                            <div>Pendant</div>
+                            <div>Ring</div>
+                            <div>Studs</div>
+                        `;
+                    break;
+                case 'weddingRings':
+                    selectedContentResponsive = '<div>Gold Ring</div>';
+                    break;
+                default:
+                    selectedContentResponsive = '';
+            }
+
+            // Update the selected content area (Responsive Navigation)
+            var selectedContentAreaResponsive = document.getElementById('selectedContentResponsive');
+            selectedContentAreaResponsive.innerHTML = selectedContentResponsive;
         }
     </script>
-    <section ></section>
+    <section></section>
 </body>
 </html>
