@@ -33,16 +33,53 @@ body{
     bottom:1rem;
     z-index: 0;
 }
-.nav{
+.nav {
     display: flex; 
     justify-content: left;
-    gap:2rem;
+    gap: 2rem;
     font-family: 'Switzer', sans-serif;
     margin-top: 1rem;
 }
-.nav-link{
+
+.nav-link {
     text-decoration: none;
     color: black;
+    position: relative;
+    transition: color 0.3s, background-image 0.3s;
+    /* background-image: linear-gradient(45deg, #4200FF, #820FE7, #9C29BE, #FD7042, #FC9D49); */
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    top:1.5rem;
+    left: 0;
+    background-image: linear-gradient(45deg, #63392C, #63392C); /* Brown color for the underline */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: black; /* Black text color on hover */
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.nav-link.selected {
+    color: black; /* Black text color when selected */
+    font-weight: bold; /* Increase font weight when selected */
+}
+
+.nav-link.selected::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 ul{
     list-style-type: none;
@@ -90,4 +127,87 @@ input:focus {
 }
 form{
     margin-top: 1rem;
+}
+.c{
+    color: #63392C;
+}
+#hd{
+    display: block;
+}
+#hd1{
+    display: none;
+}
+#mySidenav{
+    display: none;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#004080;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.res{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+.res-img{
+    width: 6rem;
+    padding-right: 4rem;
+}
+@media only screen and (max-width: 800px) {
+    #hd{
+        display: none;
+    }
+    
+
+}   
+    /* Adjust the styles for smaller screens */
+@media only screen and (max-width: 500px) {
+    #hd{
+        display: none;
+    }
+    #hd1{
+        display: block;
+    }
+    #mySidenav{
+        display: block;
+    }
+    .search{
+        width: 17rem;
+    }
+    .pos{
+        bottom: 0;
+        top:1rem;
+    }
+    
 }

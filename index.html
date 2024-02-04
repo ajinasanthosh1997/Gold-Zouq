@@ -6,10 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/style.css">
     <link href="https://api.fontshare.com/v2/css?f[]=switzer@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-TsZ0HJ5un8EftmqUcR2RbC5apQxYo1P0ZcxNiiwOJOPTeD7NdmAuRbPw+8RIq7AH9eJhavZRMydrbI9zCuPR4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <header>
+    <header id="hd">
         <div class="flex">
             <div>
                 <img src="assets/img/gold-zouq.svg" class="hd-img">
@@ -18,7 +21,7 @@
                 <div class="header" >
             
                     <nav class="nav">
-                        <a href="#" class="nav-link" onclick="showContent('gold')">GOLD</a>
+                        <a href="#" class="nav-link selected" onclick="showContent('gold')">GOLD</a>
                         <a href="#" class="nav-link" onclick="showContent('diamond')">DIAMOND</a>
                         <a href="#" class="nav-link" onclick="showContent('weddingRings')">WEDDING RINGS</a>
                     </nav>
@@ -39,7 +42,16 @@
                         </div>
                     </div>
                 </div>
-                <div id="selectedContent" class="hd-flex"></div>
+                <div id="selectedContent" class="hd-flex">
+                    <!-- Default content for the selected item -->
+                    <div>Bangle</div>
+                    <div>Bracelet</div>
+                    <div>Chain</div>
+                    <div>Necklace</div>
+                    <div>Pendant</div>
+                    <div>Ring</div>
+                    <div>Studs</div>
+                </div>
 
             <script>
                 // Show the default content (gold) when the page loads
@@ -48,6 +60,15 @@
                 };
 
                 function showContent(contentType) {
+                    // Remove the 'selected' class from all nav-links
+                    document.querySelectorAll('.nav-link').forEach(function (link) {
+                        link.classList.remove('selected');
+                    });
+
+                    // Add the 'selected' class to the clicked nav-link
+                    var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\')"]');
+                    selectedLink.classList.add('selected');
+
                     // Create the selected content dynamically
                     var selectedContent;
                     switch (contentType) {
@@ -92,6 +113,51 @@
         
         <div class="pos"></div> 
     </header>
+    <header id="hd1">
+        <div class="res">
+            <div>
+                <div style="width:2rem;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
+                <div>menu</div>
+            </div>
+            <img src="assets/img/gold-zouq.svg" class="res-img">
+            <div class="">
+                <img src="assets/img/user.svg">
+                <div>User</div>
+            </div>
+            <div class="">
+                <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
+                <div>Calculator</div>
+            </div>
+        </div>
+        <form action="/search" method="get">
+            <div class="search-container">
+                <img src="assets/img/search.svg" class="icon">
+                <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+            </div>
+        </form>
+        <div class="pos"></div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'authentication:logout' %}">Logout</a></li>
+            {% endif %}
+            <!-- Add more navigation links as needed -->
+            
+        </ul>
+    </div>
+    <script>
+        function toggleNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
     <section ></section>
 </body>
 </html>
