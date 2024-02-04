@@ -140,31 +140,35 @@
     <div class="pos"></div>
 </header>
 <div id="mySidenav" class="sidenav">
+    <img src="assets/img/gold-zouq.svg" class="res-img" style="padding: 0 8rem;">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="res-flex">
-        <nav class="nav">
+        <nav class="nav" style="border-right: 1px solid black;height: 50rem;padding: 1rem;">
             <a href="#" class="nav-link selected" onclick="showContent('gold', 'responsive')">GOLD</a>
             <a href="#" class="nav-link" onclick="showContent('diamond', 'responsive')">DIAMOND</a>
             <a href="#" class="nav-link" onclick="showContent('weddingRings', 'responsive')">WEDDING RINGS</a>
         </nav>
         <div id="selectedContentResponsive" class="hd-flex">
             <!-- Default content for the selected item -->
-            <div>Bangle</div>
-            <div>Bracelet</div>
-            <div>Chain</div>
-            <div>Necklace</div>
-            <div>Pendant</div>
-            <div>Ring</div>
-            <div>Studs</div>
+            <div style="margin-bottom: 20px;">Bangle</div>
+            <div style="margin-bottom: 20px;">Bracelet</div>
+            <div style="margin-bottom: 20px;">Chain</div>
+            <div style="margin-bottom: 20px;">Necklace</div>
+            <div style="margin-bottom: 20px;">Pendant</div>
+            <div style="margin-bottom: 20px;">Ring</div>
+            <div style="margin-bottom: 20px;">Studs</div>
         </div>
 
     </div>
     <script>
         // Show the default content (gold) when the page loads
+        // Show the default content (gold) when the page loads for both main and responsive navigation
         window.onload = function () {
-            showContent('gold', 'responsive');
-        };
-
+    showContent('gold', 'main');
+    
+    // Hide the toggle button on page load
+    // document.getElementById("toggleBtn").style.display = "none";
+};
         function showContent(contentType, navType) {
             // Remove the 'selected' class from all nav-links (Main Navigation)
             document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -179,27 +183,27 @@
             var selectedContentMain;
             switch (contentType) {
                 case 'gold':
-                    selectedContentMain = `
-                            <div>Bangle</div>
-                            <div>Bracelet</div>
-                            <div>Chain</div>
-                            <div>Necklace</div>
-                            <div>Pendant</div>
-                            <div>Ring</div>
-                            <div>Studs</div>
-                        `;
+                selectedContentMain = `
+                        <div style="margin-bottom: 20px;">Bangle</div>
+                        <div style="margin-bottom: 20px;">Bracelet</div>
+                        <div style="margin-bottom: 20px;">Chain</div>
+                        <div style="margin-bottom: 20px;">Necklace</div>
+                        <div style="margin-bottom: 20px;">Pendant</div>
+                        <div style="margin-bottom: 20px;">Ring</div>
+                        <div style="margin-bottom: 20px;">Studs</div>
+                    `;
                     break;
                 case 'diamond':
                     selectedContentMain = `
-                            <div>Bangle</div>
-                            <div>Bracelet</div>
-                            <div>Pendant</div>
-                            <div>Ring</div>
-                            <div>Studs</div>
+                            <div style="margin-bottom: 20px;">Bangle</div>
+                            <div style="margin-bottom: 20px;">Bracelet</div>
+                            <div style="margin-bottom: 20px;">Pendant</div>
+                            <div style="margin-bottom: 20px;">Ring</div>
+                            <div style="margin-bottom: 20px;">Studs</div>
                         `;
                     break;
                 case 'weddingRings':
-                    selectedContentMain = '<div>Gold Ring</div>';
+                    selectedContentMain = '<div style="margin-bottom: 20px;">Gold Ring</div><br>';
                     break;
                 default:
                     selectedContentMain = '';
@@ -223,26 +227,26 @@
             switch (contentType) {
                 case 'gold':
                     selectedContentResponsive = `
-                            <div>Bangle</div>
-                            <div>Bracelet</div>
-                            <div>Chain</div>
-                            <div>Necklace</div>
-                            <div>Pendant</div>
-                            <div>Ring</div>
-                            <div>Studs</div>
+                            <div style="margin-bottom: 20px;">Bangle</div>
+                            <div style="margin-bottom: 20px;">Bracelet</div>
+                            <div style="margin-bottom: 20px;">Chain</div>
+                            <div style="margin-bottom: 20px;">Necklace</div>
+                            <div style="margin-bottom: 20px;">Pendant</div>
+                            <div style="margin-bottom: 20px;">Ring</div>
+                            <div style="margin-bottom: 20px;">Studs</div>
                         `;
                     break;
                 case 'diamond':
                     selectedContentResponsive = `
-                            <div>Bangle</div>
-                            <div>Bracelet</div>
-                            <div>Pendant</div>
-                            <div>Ring</div>
-                            <div>Studs</div>
+                            <div style="margin-bottom: 20px;">Bangle</div>
+                            <div style="margin-bottom: 20px;">Bracelet</div>
+                            <div style="margin-bottom: 20px;">Pendant</div>
+                            <div style="margin-bottom: 20px;">Ring</div>
+                            <div style="margin-bottom: 20px;">Studs</div>
                         `;
                     break;
                 case 'weddingRings':
-                    selectedContentResponsive = '<div>Gold Ring</div>';
+                    selectedContentResponsive = '<div style="margin-bottom: 20px;">Gold Ring</div>';
                     break;
                 default:
                     selectedContentResponsive = '';
