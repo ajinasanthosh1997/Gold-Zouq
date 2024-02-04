@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="flex">
+            <div>
+                <img src="assets/img/gold-zouq.svg" class="hd-img">
+            </div>
+            <div>
+                <div class="header" >
+            
+                    <nav class="nav">
+                        <a href="#" class="nav-link" onclick="showContent('gold')">GOLD</a>
+                        <a href="#" class="nav-link" onclick="showContent('diamond')">DIAMOND</a>
+                        <a href="#" class="nav-link" onclick="showContent('weddingRings')">WEDDING RINGS</a>
+                    </nav>
+                    <form action="/search" method="get">
+                        <div class="search-container">
+                            <img src="assets/img/search.svg" class="icon">
+                            <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+                        </div>
+                    </form>
+                    <div class="hd-div">
+                        <div class="box">
+                            <img src="assets/img/user.svg">
+                            <div>User</div>
+                        </div>
+                        <div class="box1">
+                            <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
+                            <div>Calculator</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="selectedContent" class="hd-flex"></div>
+
+            <script>
+                // Show the default content (gold) when the page loads
+                window.onload = function() {
+                    showContent('gold');
+                };
+
+                function showContent(contentType) {
+                    // Create the selected content dynamically
+                    var selectedContent;
+                    switch (contentType) {
+                        case 'gold':
+                            selectedContent = `
+                                <div>Bangle</div>
+                                <div>Bracelet</div>
+                                <div>Chain</div>
+                                <div>Necklace</div>
+                                <div>Pendant</div>
+                                <div>Ring</div>
+                                <div>Studs</div>
+                            `;
+                            break;
+                        case 'diamond':
+                            selectedContent = `
+                                <div>Bangle</div>
+                                <div>Bracelet</div>
+                                <div>Pendant</div>
+                                <div>Ring</div>
+                                <div>Studs</div>
+                            `;
+                            break;
+                        case 'weddingRings':
+                            selectedContent = '<div>Gold Ring</div>';
+                            break;
+                        default:
+                            selectedContent = '';
+                    }
+
+                    // Update the selected content area
+                    var selectedContentArea = document.getElementById('selectedContent');
+                    selectedContentArea.innerHTML = selectedContent;
+                }
+            </script>
+            
+            </div>
+
+            <!-- Display area for selected content -->
+            
+        </div>
+        
+        <div class="pos"></div> 
+    </header>
+    <section ></section>
+</body>
+</html>
