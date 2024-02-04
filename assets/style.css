@@ -223,7 +223,7 @@ form{
     }
     .hd-flex{
         display: block;
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
     .nav-link.selected::after {
         transform: scaleX(0);
