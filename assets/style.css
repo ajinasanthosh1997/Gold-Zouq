@@ -264,7 +264,12 @@ form{
     color:#63392C;
     font-size: 22px;
 }
-
+.sec3{
+    margin: 2rem 4rem;
+}
+.sec3-img{
+    width: 100%;
+}
 .ftr{
     display: flex;
     justify-content:center;
@@ -298,6 +303,12 @@ footer p{
 }
 footer h4{
     color: #63392C;
+}
+#sec3img2{
+    display: none;
+}
+#sec3img1{
+    display: block;
 }
 @media only screen and (max-width: 800px) {
     #hd{
@@ -399,6 +410,18 @@ footer h4{
     }
     footer p{
         font-size: 12px;
+    }
+    #sec3img2{
+        display: block;
+    }
+    #sec3img1{
+        display: none;
+    }
+    .sec3{
+        margin: 2rem 1rem;
+    }
+    .sec2-flex{
+        gap:1rem;
     }
 
 }
