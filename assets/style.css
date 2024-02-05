@@ -369,11 +369,11 @@ footer h4{
     }
     
     .ftr{
-        /* margin-top: 1rem; */
+        margin-top: 1rem;
         display: flex;
-        justify-content:center;
+        justify-content:left;
         /* gap:10rem; */
-        gap:2rem;
+        gap:5rem;
         flex-wrap: wrap;
 
         
