@@ -319,6 +319,7 @@ footer h4{
     }
     .search{
         width: 17rem;
+        margin-left: -1rem;
     }
     .pos{
         bottom: 0;
@@ -335,6 +336,9 @@ footer h4{
         transform: scaleX(0); /* Set the underline to be hidden */
         
 
+    }
+    .icon{
+        left:1rem;
     }
     .hd-flex{
         display: block;
