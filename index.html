@@ -9,234 +9,192 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-TsZ0HJ5un8EftmqUcR2RbC5apQxYo1P0ZcxNiiwOJOPTeD7NdmAuRbPw+8RIq7AH9eJhavZRMydrbI9zCuPR4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
 </head>
 <body>
-
-<header id="hd">
-    <div class="flex">
-        <div>
-            <img src="assets/img/gold-zouq.svg" class="hd-img">
-        </div>
-        <div>
-            <div class="header">
-                <nav class="nav">
-                    <a href="#" class="nav-link selected" onclick="showContent('gold', 'main')">GOLD</a>
-                    <a href="#" class="nav-link" onclick="showContent('diamond', 'main')">DIAMOND</a>
-                    <a href="#" class="nav-link" onclick="showContent('weddingRings', 'main')">WEDDING RINGS</a>
-                </nav>
-                <form action="/search" method="get">
-                    <div class="search-container">
-                        <img src="assets/img/search.svg" class="icon">
-                        <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
-                    </div>
-                </form>
-                <div class="hd-div">
-                    <div class="box">
-                        <img src="assets/img/user.svg">
-                        <div>User</div>
-                    </div>
-                    <div class="box1">
-                        <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
-                        <div>Calculator</div>
+    <header id="hd">
+        <div class="flex">
+            <div>
+                <img src="assets/img/gold-zouq.svg" class="hd-img">
+            </div>
+            <div>
+                <div class="header">
+                    <nav class="nav">
+                        <a href="#" class="nav-link selected" onclick="showContent('gold', 'main')">GOLD</a>
+                        <a href="#" class="nav-link" onclick="showContent('diamond', 'main')">DIAMOND</a>
+                        <a href="#" class="nav-link" onclick="showContent('weddingRings', 'main')">WEDDING RINGS</a>
+                    </nav>
+                    <form action="/search" method="get">
+                        <div class="search-container">
+                            <img src="assets/img/search.svg" class="icon">
+                            <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+                        </div>
+                    </form>
+                    <div class="hd-div">
+                        <div class="box">
+                            <img src="assets/img/user.svg">
+                            <div>User</div>
+                        </div>
+                        <div class="box1">
+                            <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
+                            <div>Calculator</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="selectedContentMain" class="hd-flex">
-                <!-- Default content for the selected item -->
-                <div>Bangle</div>
-                <div>Bracelet</div>
-                <div>Chain</div>
-                <div>Necklace</div>
-                <div>Pendant</div>
-                <div>Ring</div>
-                <div>Studs</div>
-            </div>
+                <div id="selectedContentMain" class="hd-flex">
+                    <!-- Default content for the selected item -->
+                    <div>Bangle</div>
+                    <div>Bracelet</div>
+                    <div>Chain</div>
+                    <div>Necklace</div>
+                    <div>Pendant</div>
+                    <div>Ring</div>
+                    <div>Studs</div>
+                </div>
 
-            <script>
-                // Show the default content (gold) when the page loads
-                window.onload = function () {
-                    showContent('gold', 'main');
-                };
+                <script>
+                    // Show the default content (gold) when the page loads
+                    window.onload = function () {
+                        showContent('gold', 'main');
+                    };
 
-                function showContent(contentType, navType) {
-                    // Remove the 'selected' class from all nav-links
-                    document.querySelectorAll('.nav-link').forEach(function (link) {
-                        link.classList.remove('selected');
-                    });
+                    function showContent(contentType, navType) {
+                        // Remove the 'selected' class from all nav-links
+                        document.querySelectorAll('.nav-link').forEach(function (link) {
+                            link.classList.remove('selected');
+                        });
 
-                    // Add the 'selected' class to the clicked nav-link
-                    var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
-                    selectedLink.classList.add('selected');
+                        // Add the 'selected' class to the clicked nav-link
+                        var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+                        selectedLink.classList.add('selected');
 
-                    // Create the selected content dynamically
-                    var selectedContent;
-                    switch (contentType) {
-                        case 'gold':
-                            selectedContent = `
-                                <div>Bangle</div>
-                                <div>Bracelet</div>
-                                <div>Chain</div>
-                                <div>Necklace</div>
-                                <div>Pendant</div>
-                                <div>Ring</div>
-                                <div>Studs</div>
-                            `;
-                            break;
-                        case 'diamond':
-                            selectedContent = `
-                                <div>Bangle</div>
-                                <div>Bracelet</div>
-                                <div>Pendant</div>
-                                <div>Ring</div>
-                                <div>Studs</div>
-                            `;
-                            break;
-                        case 'weddingRings':
-                            selectedContent = '<div>Gold Ring</div>';
-                            break;
-                        default:
-                            selectedContent = '';
+                        // Create the selected content dynamically
+                        var selectedContent;
+                        switch (contentType) {
+                            case 'gold':
+                                selectedContent = `
+                                    <div>Bangle</div>
+                                    <div>Bracelet</div>
+                                    <div>Chain</div>
+                                    <div>Necklace</div>
+                                    <div>Pendant</div>
+                                    <div>Ring</div>
+                                    <div>Studs</div>
+                                `;
+                                break;
+                            case 'diamond':
+                                selectedContent = `
+                                    <div>Bangle</div>
+                                    <div>Bracelet</div>
+                                    <div>Pendant</div>
+                                    <div>Ring</div>
+                                    <div>Studs</div>
+                                `;
+                                break;
+                            case 'weddingRings':
+                                selectedContent = '<div>Gold Ring</div>';
+                                break;
+                            default:
+                                selectedContent = '';
+                        }
+
+                        // Update the selected content area
+                        var selectedContentArea = document.getElementById('selectedContent' + (navType === 'main' ? 'Main' : 'Responsive'));
+                        selectedContentArea.innerHTML = selectedContent;
                     }
+                </script>
 
-                    // Update the selected content area
-                    var selectedContentArea = document.getElementById('selectedContent' + (navType === 'main' ? 'Main' : 'Responsive'));
-                    selectedContentArea.innerHTML = selectedContent;
-                }
-            </script>
-
-        </div>
-
-        <!-- Display area for selected content -->
-
-    </div>
-
-    <div class="pos"></div>
-</header>
-<header id="hd1">
-    <div class="res">
-        <div>
-            <div style="width:2rem;color:#63392C;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
-            <div style="color: #63392C;">Menu</div>
-        </div>
-        <img src="assets/img/gold-zouq.svg" class="res-img">
-        <div class="">
-            <img src="assets/img/user.svg">
-            <div>User</div>
-        </div>
-        <div class="">
-            <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
-            <div>Calculator</div>
-        </div>
-    </div>
-    <div style="display: flex;justify-content: center;">
-        <form action="/search" method="get">
-            <div class="search-container">
-                <img src="assets/img/search.svg" class="icon">
-                <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
             </div>
-        </form>
-    </div>
 
-    <div class="pos"></div>
-</header>
-<div id="mySidenav" class="sidenav">
-    <img src="assets/img/gold-zouq.svg" class="res-img" style="padding: 0 8rem;">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="res-flex">
-        <nav class="nav" style="border-right: 1px solid black;height: 50rem;padding: 1rem;">
-            <a href="#" class="nav-link selected" onclick="showContent('gold', 'responsive')">GOLD &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; ></a>
-            <a href="#" class="nav-link" onclick="showContent('diamond', 'responsive')">DIAMOND&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;   ></a>
-            <a href="#" class="nav-link" onclick="showContent('weddingRings', 'responsive')">WEDDING RINGS &nbsp; &nbsp; ></a>
-        </nav>
-        
-        <div id="selectedContentResponsive" class="hd-flex">
-            <!-- Default content for the selected item -->
-            <div style="margin-bottom: 20px;">Bangle</div>
-            <div style="margin-bottom: 20px;">Bracelet</div>
-            <div style="margin-bottom: 20px;">Chain</div>
-            <div style="margin-bottom: 20px;">Necklace</div>
-            <div style="margin-bottom: 20px;">Pendant</div>
-            <div style="margin-bottom: 20px;">Ring</div>
-            <div style="margin-bottom: 20px;">Studs</div>
+            <!-- Display area for selected content -->
+
         </div>
 
-    </div>
-    <script>
-        // Show the default content (gold) when the page loads
-        // Show the default content (gold) when the page loads for both main and responsive navigation
-        window.onload = function () {
-        // Get the screen width
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        <div class="pos"></div>
+    </header>
+    <header id="hd1">
+        <div class="res">
+            <div>
+                <div style="width:2rem;color:#63392C;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
+                <div style="color: #63392C;">Menu</div>
+            </div>
+            <img src="assets/img/gold-zouq.svg" class="res-img">
+            <div class="">
+                <img src="assets/img/user.svg">
+                <div>User</div>
+            </div>
+            <div class="">
+                <img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1">
+                <div>Calculator</div>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center;">
+            <form action="/search" method="get">
+                <div class="search-container">
+                    <img src="assets/img/search.svg" class="icon">
+                    <input type="text" name="q" placeholder="Search for products, brands and more" class="search">
+                </div>
+            </form>
+        </div>
 
-        // Check if the screen width is greater than a specific value (e.g., 600px)
-        if (screenWidth > 600) {
-            showContent('gold', 'main');
-        }
+        <div class="pos"></div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <img src="assets/img/gold-zouq.svg" class="res-img" style="padding: 0 8rem;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="res-flex">
+            <nav class="nav" style="border-right: 1px solid black;height: 50rem;padding: 1rem;">
+                <a href="#" class="nav-link selected" onclick="showContent('gold', 'responsive')">GOLD &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; ></a>
+                <a href="#" class="nav-link" onclick="showContent('diamond', 'responsive')">DIAMOND&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;   ></a>
+                <a href="#" class="nav-link" onclick="showContent('weddingRings', 'responsive')">WEDDING RINGS &nbsp; &nbsp; ></a>
+            </nav>
+            
+            <div id="selectedContentResponsive" class="hd-flex">
+                <!-- Default content for the selected item -->
+                <div style="margin-bottom: 20px;">Bangle</div>
+                <div style="margin-bottom: 20px;">Bracelet</div>
+                <div style="margin-bottom: 20px;">Chain</div>
+                <div style="margin-bottom: 20px;">Necklace</div>
+                <div style="margin-bottom: 20px;">Pendant</div>
+                <div style="margin-bottom: 20px;">Ring</div>
+                <div style="margin-bottom: 20px;">Studs</div>
+            </div>
 
-        // Optionally, you can also hide the toggle button on page load for smaller screens
-        // var toggleBtn = document.getElementById("toggleBtn");
-        // if (screenWidth <= 600) {
-        //     toggleBtn.style.display = "none";
-        // }
-    c };
-        function showContent(contentType, navType) {
-            // Remove the 'selected' class from all nav-links (Main Navigation)
-            document.querySelectorAll('.nav-link').forEach(function (link) {
-                link.classList.remove('selected');
-            });
+        </div>
+        <script>
+            // Show the default content (gold) when the page loads
+            // Show the default content (gold) when the page loads for both main and responsive navigation
+            window.onload = function () {
+            // Get the screen width
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-            // Add the 'selected' class to the clicked nav-link (Main Navigation)
-            var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
-            selectedLink.classList.add('selected');
-
-            // Create the selected content dynamically (Main Navigation)
-            var selectedContentMain;
-            switch (contentType) {
-                case 'gold':
-                selectedContentMain = `
-                        <div style="margin-bottom: 20px;">Bangle</div>
-                        <div style="margin-bottom: 20px;">Bracelet</div>
-                        <div style="margin-bottom: 20px;">Chain</div>
-                        <div style="margin-bottom: 20px;">Necklace</div>
-                        <div style="margin-bottom: 20px;">Pendant</div>
-                        <div style="margin-bottom: 20px;">Ring</div>
-                        <div style="margin-bottom: 20px;">Studs</div>
-                    `;
-                    break;
-                case 'diamond':
-                    selectedContentMain = `
-                            <div style="margin-bottom: 20px;">Bangle</div>
-                            <div style="margin-bottom: 20px;">Bracelet</div>
-                            <div style="margin-bottom: 20px;">Pendant</div>
-                            <div style="margin-bottom: 20px;">Ring</div>
-                            <div style="margin-bottom: 20px;">Studs</div>
-                        `;
-                    break;
-                case 'weddingRings':
-                    selectedContentMain = '<div style="margin-bottom: 20px;">Gold Ring</div><br>';
-                    break;
-                default:
-                    selectedContentMain = '';
+            // Check if the screen width is greater than a specific value (e.g., 600px)
+            if (screenWidth > 600) {
+                showContent('gold', 'main');
             }
 
-            // Update the selected content area (Main Navigation)
-            var selectedContentAreaMain = document.getElementById('selectedContentMain');
-            selectedContentAreaMain.innerHTML = selectedContentMain;
+            // Optionally, you can also hide the toggle button on page load for smaller screens
+            // var toggleBtn = document.getElementById("toggleBtn");
+            // if (screenWidth <= 600) {
+            //     toggleBtn.style.display = "none";
+            // }
+            };
+            function showContent(contentType, navType) {
+                // Remove the 'selected' class from all nav-links (Main Navigation)
+                document.querySelectorAll('.nav-link').forEach(function (link) {
+                    link.classList.remove('selected');
+                });
 
-            // Remove the 'selected' class from all nav-links (Responsive Navigation)
-            document.querySelectorAll('.nav-link').forEach(function (link) {
-                link.classList.remove('selected');
-            });
+                // Add the 'selected' class to the clicked nav-link (Main Navigation)
+                var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+                selectedLink.classList.add('selected');
 
-            // Add the 'selected' class to the clicked nav-link (Responsive Navigation)
-            var selectedLinkResponsive = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
-            selectedLinkResponsive.classList.add('selected');
-
-            // Create the selected content dynamically (Responsive Navigation)
-            var selectedContentResponsive;
-            switch (contentType) {
-                case 'gold':
-                    selectedContentResponsive = `
+                // Create the selected content dynamically (Main Navigation)
+                var selectedContentMain;
+                switch (contentType) {
+                    case 'gold':
+                    selectedContentMain = `
                             <div style="margin-bottom: 20px;">Bangle</div>
                             <div style="margin-bottom: 20px;">Bracelet</div>
                             <div style="margin-bottom: 20px;">Chain</div>
@@ -245,107 +203,199 @@
                             <div style="margin-bottom: 20px;">Ring</div>
                             <div style="margin-bottom: 20px;">Studs</div>
                         `;
-                    break;
-                case 'diamond':
-                    selectedContentResponsive = `
-                            <div style="margin-bottom: 20px;">Bangle</div>
-                            <div style="margin-bottom: 20px;">Bracelet</div>
-                            <div style="margin-bottom: 20px;">Pendant</div>
-                            <div style="margin-bottom: 20px;">Ring</div>
-                            <div style="margin-bottom: 20px;">Studs</div>
-                        `;
-                    break;
-                case 'weddingRings':
-                    selectedContentResponsive = '<div style="margin-bottom: 20px;">Gold Ring</div>';
-                    break;
-                default:
-                    selectedContentResponsive = '';
+                        break;
+                    case 'diamond':
+                        selectedContentMain = `
+                                <div style="margin-bottom: 20px;">Bangle</div>
+                                <div style="margin-bottom: 20px;">Bracelet</div>
+                                <div style="margin-bottom: 20px;">Pendant</div>
+                                <div style="margin-bottom: 20px;">Ring</div>
+                                <div style="margin-bottom: 20px;">Studs</div>
+                            `;
+                        break;
+                    case 'weddingRings':
+                        selectedContentMain = '<div style="margin-bottom: 20px;">Gold Ring</div><br>';
+                        break;
+                    default:
+                        selectedContentMain = '';
+                }
+
+                // Update the selected content area (Main Navigation)
+                var selectedContentAreaMain = document.getElementById('selectedContentMain');
+                selectedContentAreaMain.innerHTML = selectedContentMain;
+
+                // Remove the 'selected' class from all nav-links (Responsive Navigation)
+                document.querySelectorAll('.nav-link').forEach(function (link) {
+                    link.classList.remove('selected');
+                });
+
+                // Add the 'selected' class to the clicked nav-link (Responsive Navigation)
+                var selectedLinkResponsive = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+                selectedLinkResponsive.classList.add('selected');
+
+                // Create the selected content dynamically (Responsive Navigation)
+                var selectedContentResponsive;
+                switch (contentType) {
+                    case 'gold':
+                        selectedContentResponsive = `
+                                <div style="margin-bottom: 20px;">Bangle</div>
+                                <div style="margin-bottom: 20px;">Bracelet</div>
+                                <div style="margin-bottom: 20px;">Chain</div>
+                                <div style="margin-bottom: 20px;">Necklace</div>
+                                <div style="margin-bottom: 20px;">Pendant</div>
+                                <div style="margin-bottom: 20px;">Ring</div>
+                                <div style="margin-bottom: 20px;">Studs</div>
+                            `;
+                        break;
+                    case 'diamond':
+                        selectedContentResponsive = `
+                                <div style="margin-bottom: 20px;">Bangle</div>
+                                <div style="margin-bottom: 20px;">Bracelet</div>
+                                <div style="margin-bottom: 20px;">Pendant</div>
+                                <div style="margin-bottom: 20px;">Ring</div>
+                                <div style="margin-bottom: 20px;">Studs</div>
+                            `;
+                        break;
+                    case 'weddingRings':
+                        selectedContentResponsive = '<div style="margin-bottom: 20px;">Gold Ring</div>';
+                        break;
+                    default:
+                        selectedContentResponsive = '';
+                }
+
+                // Update the selected content area (Responsive Navigation)
+                var selectedContentAreaResponsive = document.getElementById('selectedContentResponsive');
+                selectedContentAreaResponsive.innerHTML = selectedContentResponsive;
+            }
+        </script>
+        <script>
+            function toggleNav() {
+                document.getElementById("mySidenav").style.width = "100%";
             }
 
-            // Update the selected content area (Responsive Navigation)
-            var selectedContentAreaResponsive = document.getElementById('selectedContentResponsive');
-            selectedContentAreaResponsive.innerHTML = selectedContentResponsive;
-        }
-    </script>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>    
+    <section class="sec-m">
+        <div class="carousel" id="c">
+            <img src="assets/img/brown_color_pendant_banner_zJvG7fx_1_1_11zon_LCleT3R.jpg" alt="Image 1">
+            <img src="assets/img/green_banner_1_2_11zon_7_11zon.jpg" alt="Image 2">
+            <img src="assets/img/Green_color_stud_banner_1220x350_2_3_11zon_8_11zon.jpg" alt="Image 3">
+            
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="carousel" id="c1">
+            <img src="assets/img/Green_color_stud_banner_1080x850mob.webp" alt="Image 1">
+            <img src="assets/img/PENDENT_COLLECTION_BANNER_1080X850mob.webp" alt="Image 2">
+            <img src="assets/img/green_banner_mobile.webp" alt="Image 3">
+            
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
     <script>
-        function toggleNav() {
-            document.getElementById("mySidenav").style.width = "100%";
+        let currentSlide = 0;
+        const carousels = document.querySelectorAll('.carousel');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            carousels.forEach((carousel) => {
+                const slides = carousel.querySelectorAll('img');
+                slides.forEach((slide) => (slide.style.display = 'none'));
+            });
+
+            dots.forEach((dot) => dot.classList.remove('active'));
+
+            carousels.forEach((carousel) => {
+                const slides = carousel.querySelectorAll('img');
+                slides[index].style.display = 'block';
+            });
+
+            dots[index].classList.add('active');
         }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % carousels[0].querySelectorAll('img').length;
+            showSlide(currentSlide);
         }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + carousels[0].querySelectorAll('img').length) % carousels[0].querySelectorAll('img').length;
+            showSlide(currentSlide);
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                currentSlide = index;
+            });
+        });
+
+        // Show the first slide on page load
+        showSlide(currentSlide);
+
+        setInterval(() => {
+            nextSlide();
+        }, 3000); // Change slide every 3 seconds
     </script>
-</div>    
-<section class="sec-m">
-    <div class="carousel" id="c">
-        <img src="assets/img/brown_color_pendant_banner_zJvG7fx_1_1_11zon_LCleT3R.jpg" alt="Image 1">
-        <img src="assets/img/green_banner_1_2_11zon_7_11zon.jpg" alt="Image 2">
-        <img src="assets/img/Green_color_stud_banner_1220x350_2_3_11zon_8_11zon.jpg" alt="Image 3">
-        
-        <div class="dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+    <section>
+        <h1 class="sec-h1 dotted-heading">New Arrivals</h1>
+    </section>
+    <footer>
+        <div class="flex1">
+            <div>
+                <img src="assets/img/gold-zouq.svg">
+                <div style="margin-top: 1rem;">
+                    <a href="#" class="ftr-a">Become a Seller</a>
+                </div>
+            </div>
+            <div class="ftr">
+                
+                <div>
+                    <h4>Who We Are</h4>
+                    <p>About Us</p>
+                    <p>Contact Us</p>
+                    <p>Testimonials</p>
+                    <p>Stores</p>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <p>My Account</p>
+                    <p>Become a Seller</p>
+                </div>
+                <div>
+                    <h4>Categories</h4>
+                    <p>GOLD</p>
+                    <p>DIAMOND</p>
+                    <p>WEDDING RINGS</p>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-envelope"></i>
+                        hello@goldzouq.com
+                    </p>
+                    <p><i class="fa-solid fa-phone"></i>
+                        9496699447
+                    </p>
+                    <div class="ftr-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="carousel" id="c1">
-        <img src="assets/img/Green_color_stud_banner_1080x850mob.webp" alt="Image 1">
-        <img src="assets/img/PENDENT_COLLECTION_BANNER_1080X850mob.webp" alt="Image 2">
-        <img src="assets/img/green_banner_mobile.webp" alt="Image 3">
         
-        <div class="dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </div>
-</section>
-<script>
-    let currentSlide = 0;
-    const carousels = document.querySelectorAll('.carousel');
-    const dots = document.querySelectorAll('.dot');
-
-    function showSlide(index) {
-        carousels.forEach((carousel) => {
-            const slides = carousel.querySelectorAll('img');
-            slides.forEach((slide) => (slide.style.display = 'none'));
-        });
-
-        dots.forEach((dot) => dot.classList.remove('active'));
-
-        carousels.forEach((carousel) => {
-            const slides = carousel.querySelectorAll('img');
-            slides[index].style.display = 'block';
-        });
-
-        dots[index].classList.add('active');
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % carousels[0].querySelectorAll('img').length;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + carousels[0].querySelectorAll('img').length) % carousels[0].querySelectorAll('img').length;
-        showSlide(currentSlide);
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
-            currentSlide = index;
-        });
-    });
-
-    // Show the first slide on page load
-    showSlide(currentSlide);
-
-    setInterval(() => {
-        nextSlide();
-    }, 3000); // Change slide every 3 seconds
-</script>
-
+        
+    </footer>
 </body>
 </html>

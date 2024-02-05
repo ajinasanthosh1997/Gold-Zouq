@@ -3,7 +3,7 @@ body{
     padding: 0;
 
 }
-body{
+body div,p{
     font-family: 'Switzer', sans-serif;
 }
 .flex{
@@ -227,6 +227,65 @@ form{
     display: none;
 }
 
+.dotted-heading {
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+    margin: 20px 0;
+    color:#532d21;
+    font-size: 2rem;
+}
+
+.dotted-heading::before,
+.dotted-heading::after {
+    content: '';
+    display: inline-block;
+    width: 40%; /* Adjust the width of the dotted lines as needed */
+    height: 1px;
+    background-color: #532d21; /* Color of the dotted lines */
+    
+}
+
+.dotted-heading::before {
+    margin-right: 1%; /* Adjust the margin between the text and the right dotted line */
+}
+
+.dotted-heading::after {
+    margin-left: 1%; /* Adjust the margin between the text and the left dotted line */
+}
+
+
+.ftr{
+    display: flex;
+    justify-content:center;
+    gap:10rem;
+    flex-wrap: wrap;
+    
+}
+.ftr-a{
+    
+    text-decoration: none;
+    color: white;
+    padding: .8rem 1rem;
+    background-color: #63392C;
+    border-radius: .4rem;
+}
+.flex1{
+    display: flex;
+    justify-content: center;
+    gap:10rem;
+}
+footer{
+    margin: 2rem 4rem;
+}
+footer p{
+    font-size: 14px;
+}
+.ftr-icon{
+    display: flex;
+    justify-content: left;
+    gap:1rem;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -298,5 +357,19 @@ form{
     #c1{
         display: block;
     }
+    .dotted-heading::before, .dotted-heading::after{
+        width: 20%;
+    }
+    .flex1{
+        display: block;
+    }
     
+    .ftr{
+        display: flex;
+        justify-content:space-around;
+        /* gap:10rem; */
+        gap:1.5rem;
+        flex-wrap: wrap;
+        
+    }
 }
