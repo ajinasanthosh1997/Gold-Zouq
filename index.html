@@ -165,11 +165,11 @@
         // Show the default content (gold) when the page loads
         // Show the default content (gold) when the page loads for both main and responsive navigation
         window.onload = function () {
-    showContent('gold', 'main');
+            showContent('gold', 'main');
     
     // Hide the toggle button on page load
     // document.getElementById("toggleBtn").style.display = "none";
-};
+            };
         function showContent(contentType, navType) {
             // Remove the 'selected' class from all nav-links (Main Navigation)
             document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -267,6 +267,57 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
-    <section></section>
+</div>    
+<section class="sec-m">
+    <div class="carousel">
+        <img src="assets/img/brown_color_pendant_banner_zJvG7fx_1_1_11zon_LCleT3R.jpg" alt="Image 1">
+        <img src="assets/img/green_banner_mobile.webp" alt="Image 2">
+        <img src="assets/img/Green_color_stud_banner_1220x350_2_3_11zon_8_11zon.jpg" alt="Image 3">
+        
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides.forEach((slide) => (slide.style.display = 'none'));
+        dots.forEach((dot) => dot.classList.remove('active'));
+
+        slides[index].style.display = 'block';
+        dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            currentSlide = index;
+        });
+    });
+
+    // Show the first slide on page load
+    showSlide(currentSlide);
+
+    setInterval(() => {
+        nextSlide();
+    }, 3000); // Change slide every 3 seconds
+</script>
 </body>
 </html>
