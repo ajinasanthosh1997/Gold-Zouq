@@ -254,7 +254,16 @@ form{
 .dotted-heading::after {
     margin-left: 1%; /* Adjust the margin between the text and the left dotted line */
 }
-
+.sec2-flex{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.sec2 a{
+    text-decoration: none;
+    color:#63392C;
+    font-size: 22px;
+}
 
 .ftr{
     display: flex;
@@ -362,7 +371,7 @@ footer h4{
         display: block;
     }
     .dotted-heading::before, .dotted-heading::after{
-        width: 20%;
+        width: 18%;
     }
     .flex1{
         display: block;
