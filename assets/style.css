@@ -375,10 +375,17 @@ footer h4{
         /* gap:10rem; */
         gap:2rem;
         flex-wrap: wrap;
+
         
     }
     footer{
         margin: 2rem .5rem;
+    }
+    footer h4{
+        font-size: 14px;
+    }
+    footer p{
+        font-size: 12px;
     }
 
 }
