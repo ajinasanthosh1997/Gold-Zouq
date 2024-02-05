@@ -220,7 +220,12 @@ form{
 .sec-m{
     margin: 2rem 6rem;
 }
-
+#c{
+    display: block;
+}
+#c1{
+    display: none;
+}
 
 @media only screen and (max-width: 800px) {
     #hd{
@@ -286,6 +291,12 @@ form{
     }
     .sec-m{
         margin: 2rem 1rem;
+    }
+    #c{
+        display: none;
+    }
+    #c1{
+        display: block;
     }
     
 }

@@ -165,11 +165,20 @@
         // Show the default content (gold) when the page loads
         // Show the default content (gold) when the page loads for both main and responsive navigation
         window.onload = function () {
+        // Get the screen width
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        // Check if the screen width is greater than a specific value (e.g., 600px)
+        if (screenWidth > 600) {
             showContent('gold', 'main');
-    
-    // Hide the toggle button on page load
-    // document.getElementById("toggleBtn").style.display = "none";
-            };
+        }
+
+        // Optionally, you can also hide the toggle button on page load for smaller screens
+        // var toggleBtn = document.getElementById("toggleBtn");
+        // if (screenWidth <= 600) {
+        //     toggleBtn.style.display = "none";
+        // }
+    c };
         function showContent(contentType, navType) {
             // Remove the 'selected' class from all nav-links (Main Navigation)
             document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -269,9 +278,9 @@
     </script>
 </div>    
 <section class="sec-m">
-    <div class="carousel">
+    <div class="carousel" id="c">
         <img src="assets/img/brown_color_pendant_banner_zJvG7fx_1_1_11zon_LCleT3R.jpg" alt="Image 1">
-        <img src="assets/img/green_banner_mobile.webp" alt="Image 2">
+        <img src="assets/img/green_banner_1_2_11zon_7_11zon.jpg" alt="Image 2">
         <img src="assets/img/Green_color_stud_banner_1220x350_2_3_11zon_8_11zon.jpg" alt="Image 3">
         
         <div class="dots">
@@ -280,28 +289,46 @@
             <span class="dot"></span>
         </div>
     </div>
+    <div class="carousel" id="c1">
+        <img src="assets/img/Green_color_stud_banner_1080x850mob.webp" alt="Image 1">
+        <img src="assets/img/PENDENT_COLLECTION_BANNER_1080X850mob.webp" alt="Image 2">
+        <img src="assets/img/green_banner_mobile.webp" alt="Image 3">
+        
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
 </section>
-
 <script>
     let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel img');
+    const carousels = document.querySelectorAll('.carousel');
     const dots = document.querySelectorAll('.dot');
 
     function showSlide(index) {
-        slides.forEach((slide) => (slide.style.display = 'none'));
+        carousels.forEach((carousel) => {
+            const slides = carousel.querySelectorAll('img');
+            slides.forEach((slide) => (slide.style.display = 'none'));
+        });
+
         dots.forEach((dot) => dot.classList.remove('active'));
 
-        slides[index].style.display = 'block';
+        carousels.forEach((carousel) => {
+            const slides = carousel.querySelectorAll('img');
+            slides[index].style.display = 'block';
+        });
+
         dots[index].classList.add('active');
     }
 
     function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
+        currentSlide = (currentSlide + 1) % carousels[0].querySelectorAll('img').length;
         showSlide(currentSlide);
     }
 
     function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        currentSlide = (currentSlide - 1 + carousels[0].querySelectorAll('img').length) % carousels[0].querySelectorAll('img').length;
         showSlide(currentSlide);
     }
 
@@ -319,5 +346,6 @@
         nextSlide();
     }, 3000); // Change slide every 3 seconds
 </script>
+
 </body>
 </html>
