@@ -433,7 +433,7 @@ footer h4{
         width: 18%;
     }
     .dotted-heading1::before, .dotted-heading1::after{
-        width: 8%;
+        width: 7%;
     }
     .flex1{
         display: block;
