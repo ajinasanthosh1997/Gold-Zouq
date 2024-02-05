@@ -287,6 +287,9 @@ footer p{
     justify-content: left;
     gap:1rem;
 }
+footer h4{
+    color: #63392C;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -366,11 +369,16 @@ footer p{
     }
     
     .ftr{
+        /* margin-top: 1rem; */
         display: flex;
-        justify-content:space-around;
+        justify-content:center;
         /* gap:10rem; */
-        gap:1.5rem;
+        gap:2rem;
         flex-wrap: wrap;
         
     }
+    footer{
+        margin: 2rem .5rem;
+    }
+
 }
