@@ -236,6 +236,14 @@ form{
     color:#532d21;
     font-size: 2rem;
 }
+.dotted-heading1 {
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+    margin: 20px 0;
+    color:#532d21;
+    font-size: 2rem;
+}
 
 .dotted-heading::before,
 .dotted-heading::after {
@@ -246,12 +254,28 @@ form{
     background-color: #532d21; /* Color of the dotted lines */
     
 }
+.dotted-heading1::before,
+.dotted-heading1::after {
+    content: '';
+    display: inline-block;
+    width: 38%; /* Adjust the width of the dotted lines as needed */
+    height: 1px;
+    background-color: #532d21; /* Color of the dotted lines */
+    
+}
 
 .dotted-heading::before {
     margin-right: 1%; /* Adjust the margin between the text and the right dotted line */
 }
 
 .dotted-heading::after {
+    margin-left: 1%; /* Adjust the margin between the text and the left dotted line */
+}
+.dotted-heading1::before {
+    margin-right: 1%; /* Adjust the margin between the text and the right dotted line */
+}
+
+.dotted-heading1::after {
     margin-left: 1%; /* Adjust the margin between the text and the left dotted line */
 }
 .sec2-flex{
@@ -309,6 +333,26 @@ footer h4{
 }
 #sec3img1{
     display: block;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.square-image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%; /* Create a square aspect ratio */
+    background-color: #ddd; /* Placeholder background color */
+}
+
+.rectangle-image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Create a rectangle aspect ratio */
+    background-color: #ddd; /* Placeholder background color */
 }
 @media only screen and (max-width: 800px) {
     #hd{
@@ -387,6 +431,9 @@ footer h4{
     }
     .dotted-heading::before, .dotted-heading::after{
         width: 18%;
+    }
+    .dotted-heading1::before, .dotted-heading1::after{
+        width: 8%;
     }
     .flex1{
         display: block;
