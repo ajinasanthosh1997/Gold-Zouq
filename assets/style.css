@@ -354,6 +354,9 @@ footer h4{
     padding-bottom: 100%; /* Create a rectangle aspect ratio */
     background-color: #ddd; /* Placeholder background color */
 }
+#res1{
+    display: none;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -470,5 +473,7 @@ footer h4{
     .sec2-flex{
         gap:1rem;
     }
-
+    #res1{
+        display: block;
+    }
 }
