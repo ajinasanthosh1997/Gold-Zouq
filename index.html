@@ -10,7 +10,7 @@
         integrity="sha512-TsZ0HJ5un8EftmqUcR2RbC5apQxYo1P0ZcxNiiwOJOPTeD7NdmAuRbPw+8RIq7AH9eJhavZRMydrbI9zCuPR4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 <body>
     <header id="hd">
@@ -604,6 +604,95 @@
         </div>
         <div style="text-align: center;margin: 4rem 0;"><a href="#" style="padding: 1rem 2rem;background-color: #63392C;color: white;border-radius: .5rem;font-size: 14px;text-decoration: none;">View all&nbsp;&nbsp; <i class="fa-solid fa-arrow-right" style="color: white;"></i></a></div>
     </section>
+    <section class="sec3">
+        <h1 class="sec-h1 dotted-heading" style="font-size: 18px;">Gifting Collections</h1>
+        
+        <div class="owl-carousel" style="display: flex;justify-content: center;gap:1rem;">
+            <div class="card" >
+                <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
+                
+                <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
+                
+                <p>Diamond engagement ring...</p>
+                <h3 style="color: #63392C;">6.000 gm</h3>
+            </div>
+            <div class="card">
+                <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
+                
+                <img src="assets/img/logo_-_chungath_jewellery.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
+                
+                <p>Minimal Holy Cross Pendant...</p>
+                <h3 style="color: #63392C;">6.460 gm</h3>
+            </div>
+            <div class="card">
+                <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
+                
+                <img src="assets/img/Mahila_Jewellers.jpg"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
+                
+                <p>Rudraksha Gold Bracelet...</p>
+                <h3 style="color: #63392C;">4.080 gm</h3>
+            </div>
+            <div class="card">
+                <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
+                
+                <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;">
+                
+                <p>Diamond engagement ring...</p>
+                <h3 style="color: #63392C;">6.000 gm</h3>
+            </div>
+            <div class="card">
+                <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
+                
+                <img src="assets/img/logo_-_chungath_jewellery.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
+                
+                <p>Minimal Holy Cross Pendant...</p>
+                <h3 style="color: #63392C;">6.460 gm</h3>
+            </div>
+            <div class="card">
+                <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
+                
+                <img src="assets/img/Mahila_Jewellers.jpg"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
+                
+                <p>Rudraksha Gold Bracelet...</p>
+                <h3 style="color: #63392C;">4.080 gm</h3>
+            </div>
+            <!-- Add more card items as needed -->
+        </div>
+        
+        <div style="text-align: center; margin: 4rem 0;">
+            <a class="owl-prev">&lt;</a>
+            <a class="owl-next">&gt;</a>
+            <div style="text-align: center;margin: 4rem 0;"><a href="#" style="padding: 1rem 2rem;background-color: #63392C;color: white;border-radius: .5rem;font-size: 14px;text-decoration: none;">View all&nbsp;&nbsp; <i class="fa-solid fa-arrow-right" style="color: white;"></i></a></div>
+        </div>
+    </section>
+    
+    <!-- Include jQuery (required for Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include Owl Carousel JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- Initialize Owl Carousel -->
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                dots: false,
+                nav: true, // Show navigation arrows
+                margin: 15,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
     <footer>
         <div class="flex1">
             <div>

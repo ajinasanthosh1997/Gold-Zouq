@@ -411,6 +411,48 @@ footer h4{
 .h:hover{
     filter: brightness(0.5);
 }
+.owl-prev,
+        .owl-next {
+            background-color: #c4c0c0;
+            color: #63392C;
+            font-size: 2rem;
+            border: none;
+            border-radius: 34rem;
+            padding: 2rem 1rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .owl-prev:hover,
+        .owl-next:hover {
+            background-color: #63392C;
+            color: #fff;
+        }
+
+        .owl-prev {
+            left: 10px;
+        }
+
+        .owl-next {
+            right: 10px;
+        }
+
+        .custom-button {
+            border-radius: 34rem;
+            padding: 2rem 1rem;
+            font-size: 2rem;
+            background-color: #c4c0c0;
+            color: #63392C;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .custom-button:hover {
+            background-color: #63392C;
+            color: #fff;
+        }
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -536,5 +578,8 @@ footer h4{
     }
     #p{
         padding: 2rem 0;
+    }
+    .card{
+        padding:5rem;
     }
 }
