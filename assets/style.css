@@ -401,6 +401,9 @@ footer h4{
 #res1{
     display: none;
 }
+.card{
+    padding: 1rem;
+}
 .card:hover{
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     /* background-color: white; */
