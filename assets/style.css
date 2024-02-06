@@ -361,6 +361,7 @@ footer h4{
 #res1{
     display: none;
 }
+
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;

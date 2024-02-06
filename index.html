@@ -350,48 +350,55 @@
     <section class="sec2">
         <h1 class="sec-h1 dotted-heading">New Arrivals</h1>
         <div class="sec2-flex">
-            <a href="#">Women</a>
-            <a href="#">Men</a>
-            <a href="#">Kids</a>
-            <a href="#">New Born</a>
+            <a href="#" onclick="showContent(event, 'women')">Women</a>
+            <a href="#" onclick="showContent(event, 'men')">Men</a>
+            <a href="#" onclick="showContent(event, 'kids')">Kids</a>
+            <a href="#" onclick="showContent(event, 'newborn')">New Born</a>
         </div>
-
+    
+        <div id="womenContent" class="content">
+            <!-- Content for Women -->
+            <p>This is the content for Women.</p>
+        </div>
+    
+        <div id="menContent" class="content">
+            <!-- Content for Men -->
+            <p>This is the content for Men.</p>
+        </div>
+    
+        <div id="kidsContent" class="content">
+            <!-- Content for Kids -->
+            <p>This is the content for Kids.</p>
+        </div>
+    
+        <div id="newbornContent" class="content">
+            <!-- Content for New Born -->
+            <p>This is the content for New Born.</p>
+        </div>
     </section>
     
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function changeCategory(newTitle, selectedCategory) {
-                document.getElementById("category-title").textContent = newTitle;
+        // Show the content for the first option (Women) by default
+        showContent(null, 'women');
     
-                const productItems = document.querySelectorAll(".product-item");
-                productItems.forEach(item => {
-                    const itemCategory = item.getAttribute("data-category").toLowerCase();
-                    if (selectedCategory.toLowerCase() === "all" || itemCategory === selectedCategory.toLowerCase()) {
-                        item.style.display = "block";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
-            }
-    
-            function handleCategoryClick(event) {
+        function showContent(event, category) {
+            if (event) {
+                // Prevent the default anchor behavior (scrolling to the top)
                 event.preventDefault();
-                const category = event.target.getAttribute("data-category");
-                changeCategory(category, category);
             }
     
-            const categoryLinks = document.querySelectorAll(".prdct-font");
-            categoryLinks.forEach(link => {
-                link.addEventListener("click", handleCategoryClick);
+            // Hide all content divs
+            var allContent = document.querySelectorAll('.content');
+            allContent.forEach(function (content) {
+                content.style.display = 'none';
             });
     
-            // Trigger a change event on the category select on page load
-            const categorySelect = document.getElementById("category-select");
-            categorySelect.addEventListener("change", function () {
-                const selectedCategory = categorySelect.value;
-                changeCategory(selectedCategory, selectedCategory);
-            });
-        });
+            // Show the selected content div
+            var selectedContent = document.getElementById(category + 'Content');
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        }
     </script>
     <section class="sec3">
         <img src="assets/img/JEWELLERY_COLLECTION_BANNER_1220X350_11zon_1.webp" class="sec3-img" id="sec3img1">
@@ -450,7 +457,7 @@
         <div class="flex1">
             <div>
                 <img src="assets/img/gold-zouq.svg">
-                <div style="margin-top: 1rem;margin-bottom: 2rem;;">
+                <div style="margin-top: 1rem;margin-bottom: 2rem;">
                     <a href="#" class="ftr-a">Become a Seller</a>
                 </div>
             </div>
