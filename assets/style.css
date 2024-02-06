@@ -411,8 +411,8 @@ footer h4{
 .h:hover{
     filter: brightness(0.5);
 }
-.owl-prev,
-        .owl-next {
+/* .owl-prev1,
+        .owl-next1 {
             background-color: #c4c0c0;
             color: #63392C;
             font-size: 2rem;
@@ -425,17 +425,17 @@ footer h4{
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
-        .owl-prev:hover,
-        .owl-next:hover {
+        .owl-prev1:hover,
+        .owl-next1:hover {
             background-color: #63392C;
             color: #fff;
         }
 
-        .owl-prev {
+        .owl-prev1{
             left: 10px;
         }
 
-        .owl-next {
+        .owl-next1 {
             right: 10px;
         }
 
@@ -452,7 +452,7 @@ footer h4{
         .custom-button:hover {
             background-color: #63392C;
             color: #fff;
-        }
+        } */
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
