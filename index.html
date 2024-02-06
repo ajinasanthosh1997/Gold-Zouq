@@ -144,7 +144,7 @@
         <img src="assets/img/gold-zouq.svg" class="res-img" style="padding: 0 8rem;">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="res-flex">
-            <nav class="nav" style="border-right: 1px solid black;height: 50rem;padding: 1rem;">
+            <nav class="nav" style="border-right: 1px solid rgb(220, 218, 218);height: 50rem;padding: 1rem;">
                 <a href="#" class="nav-link selected" onclick="showContent('gold', 'responsive')">GOLD &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; ></a>
                 <a href="#" class="nav-link" onclick="showContent('diamond', 'responsive')">DIAMOND&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;   ></a>
                 <a href="#" class="nav-link" onclick="showContent('weddingRings', 'responsive')">WEDDING RINGS &nbsp; &nbsp; ></a>
@@ -355,7 +355,44 @@
             <a href="#">Kids</a>
             <a href="#">New Born</a>
         </div>
+
     </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function changeCategory(newTitle, selectedCategory) {
+                document.getElementById("category-title").textContent = newTitle;
+    
+                const productItems = document.querySelectorAll(".product-item");
+                productItems.forEach(item => {
+                    const itemCategory = item.getAttribute("data-category").toLowerCase();
+                    if (selectedCategory.toLowerCase() === "all" || itemCategory === selectedCategory.toLowerCase()) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            }
+    
+            function handleCategoryClick(event) {
+                event.preventDefault();
+                const category = event.target.getAttribute("data-category");
+                changeCategory(category, category);
+            }
+    
+            const categoryLinks = document.querySelectorAll(".prdct-font");
+            categoryLinks.forEach(link => {
+                link.addEventListener("click", handleCategoryClick);
+            });
+    
+            // Trigger a change event on the category select on page load
+            const categorySelect = document.getElementById("category-select");
+            categorySelect.addEventListener("change", function () {
+                const selectedCategory = categorySelect.value;
+                changeCategory(selectedCategory, selectedCategory);
+            });
+        });
+    </script>
     <section class="sec3">
         <img src="assets/img/JEWELLERY_COLLECTION_BANNER_1220X350_11zon_1.webp" class="sec3-img" id="sec3img1">
         <img src="assets/img/JEWELLERY_COLLECTION_BANNER_1080X850.webp" class="sec3-img" id="sec3img2">
@@ -413,7 +450,7 @@
         <div class="flex1">
             <div>
                 <img src="assets/img/gold-zouq.svg">
-                <div style="margin-top: 1rem;">
+                <div style="margin-top: 1rem;margin-bottom: 2rem;;">
                     <a href="#" class="ftr-a">Become a Seller</a>
                 </div>
             </div>
