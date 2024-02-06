@@ -292,7 +292,7 @@ form{
 .dotted-heading::after {
     content: '';
     display: inline-block;
-    width: 40%; /* Adjust the width of the dotted lines as needed */
+    width: 39%; /* Adjust the width of the dotted lines as needed */
     height: 1px;
     background-color: #532d21; /* Color of the dotted lines */
     
@@ -530,5 +530,11 @@ footer h4{
     }
     #res1{
         display: block;
+    }
+    #ft{
+        margin-bottom: 4rem;font-size: 14px;text-align: center;
+    }
+    #p{
+        padding: 2rem 0;
     }
 }
