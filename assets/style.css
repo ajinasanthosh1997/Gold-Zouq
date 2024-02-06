@@ -404,12 +404,26 @@ footer h4{
 .card{
     padding: 1rem;
 }
+.card1{
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    /* background-color: white; */
+    border-radius: .5rem;
+    padding:1rem;
+}
 .card:hover{
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     /* background-color: white; */
     border-radius: .5rem;
    
     
+}
+.star-container {
+    display: inline-block;
+    font-size: 24px; /* Adjust the size of the stars */
+}
+
+.star {
+    color: gold; /* Change the color of the stars */
 }
 .h:hover{
     filter: brightness(0.5);
@@ -456,6 +470,13 @@ footer h4{
             background-color: #63392C;
             color: #fff;
         } */
+
+#green{
+    display: block;
+}
+#green1{
+    display: none;
+}         
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -465,6 +486,12 @@ footer h4{
 }   
     /* Adjust the styles for smaller screens */
 @media only screen and (max-width: 500px) {
+    #green{
+        display: none;
+    }  
+    #green1{
+        display: block;
+    }  
     #hd{
         display: none;
     }
