@@ -156,13 +156,13 @@ form{
 .sidenav a {
     padding: 1rem .5rem;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     /* color: #818181; */
     display: block;
     transition: 0.3s;
 }
 .sidenav div {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .sidenav a:hover {
