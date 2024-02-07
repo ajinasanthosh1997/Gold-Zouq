@@ -557,7 +557,7 @@
         
     </section> 
 
-    <section id="res1" style="background-color: #F9EFE1; padding: .5rem ; position: fixed; bottom: 0; width: 100%;">
+    <section id="res1" style="background-color: #F9EFE1; padding: .5rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
         <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
             <div>
                 <img src="assets/img/icons-home.svg" alt="" style="height: 2rem;">
@@ -604,11 +604,11 @@
         </div>
         <div style="text-align: center;margin: 4rem 0;"><a href="#" style="padding: 1rem 2rem;background-color: #63392C;color: white;border-radius: .5rem;font-size: 14px;text-decoration: none;">View all&nbsp;&nbsp; <i class="fa-solid fa-arrow-right" style="color: white;"></i></a></div>
     </section>
-    <section class="sec3">
+    <section class="sec3" style="z-index: 0; overflow-y: hidden;">
         <h1 class="sec-h1 dotted-heading" style="font-size: 18px;">Gifting Collections</h1>
         
-        <div class="owl-carousel" style="display: flex;justify-content: center;gap:1rem;margin: 2rem 0;">
-            <div class="card" >
+        <div class="owl-carousel b" style="display: flex;justify-content: center;gap:1rem;margin: 2rem 0;" >
+            <div class="card" style="">
                 <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
@@ -665,12 +665,12 @@
     </section>
     <section>
         <h1 class="sec-h1 dotted-heading1">What people say about us</h1>
-        <div class="" style="">
+        <div class="" >
             <div class="" >
-                <div class="testimonials-carousel owl-carousel a" style="">
+                <div class="testimonials-carousel owl-carousel a" >
                     <div class="testimonial-card card1" style="">
                         <div style="padding: 1rem;border: 1px dashed #63392C;">
-                            <h4>" Great initiative and a much-needed marketplace.<span class="star-container">
+                            <h4><i class="fa-sharp fa-solid fa-quote-left" style="color: gray;"></i> Great initiative and a much-needed marketplace.<span class="star-container">
                                 <!-- Display 5 stars -->
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
@@ -686,7 +686,7 @@
                     </div>
                     <div class="testimonial-card card1"style="">
                         <div style="padding: 1rem;border: 1px dashed #63392C;">
-                            <h4>" Great initiative and a much-needed marketplace.<span class="star-container">
+                            <h4><i class="fa-sharp fa-solid fa-quote-left"></i> Great initiative and a much-needed marketplace.<span class="star-container">
                                 <!-- Display 5 stars -->
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
@@ -701,7 +701,7 @@
                     </div>
                     <div class="testimonial-card card1" style="">
                         <div style="padding: 1rem;border: 1px dashed #63392C;">
-                            <h4>" Great initiative and a much-needed marketplace.<span class="star-container">
+                            <h4><i class="fa-sharp fa-solid fa-quote-left"></i> Great initiative and a much-needed marketplace.<span class="star-container">
                                 <!-- Display 5 stars -->
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
@@ -716,7 +716,7 @@
                     </div>
                     <div class="testimonial-card card1" style="">
                         <div style="padding: 1rem;border: 1px dashed #63392C;">
-                            <h4>" Great initiative and a much-needed marketplace.<span class="star-container">
+                            <h4><i class="fa-sharp fa-solid fa-quote-left"></i> Great initiative and a much-needed marketplace.<span class="star-container">
                                 <!-- Display 5 stars -->
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
@@ -731,7 +731,7 @@
                     </div>
                     <div class="testimonial-card card1" style="">
                         <div style="padding: 1rem;border: 1px dashed #63392C;">
-                            <h4>" Great initiative and a much-needed marketplace.<span class="star-container">
+                            <h4><i class="fa-sharp fa-solid fa-quote-left"></i> Great initiative and a much-needed marketplace.<span class="star-container">
                                 <!-- Display 5 stars -->
                                 <span class="star">&#9733;</span>
                                 <span class="star">&#9733;</span>
@@ -803,9 +803,9 @@
             });
         });
     </script>
-    
-    <footer>
-        <div class="flex1">
+    <section style="border-top: 1px dashed #63392C;margin: 3rem 0;"></section>
+    <footer >
+        <div class="flex1" >
             <div>
                 <img src="assets/img/gold-zouq.svg">
                 <div style="margin-top: 1rem;margin-bottom: 2rem;">

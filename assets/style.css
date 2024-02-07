@@ -476,7 +476,10 @@ footer h4{
 }
 #green1{
     display: none;
-}         
+}  
+.owl-stage{
+    margin: 2rem 0;
+}       
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -611,5 +614,8 @@ footer h4{
     }
     .card{
         padding:5rem;
+    }
+    .owl-stage{
+        margin: 2rem 0;
     }
 }
