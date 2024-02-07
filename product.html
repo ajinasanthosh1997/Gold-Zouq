@@ -355,11 +355,16 @@
         </div>
     </section>
     <script>
+        window.onload = function() {
+            // Show 'productSpecs' section by default on page load
+            showSection('productSpecs');
+        };
+    
         function showSection(section) {
             // Hide both sections initially
             document.getElementById('productSpecs').style.display = 'none';
             document.getElementById('description').style.display = 'none';
-
+    
             // Show the selected section
             document.getElementById(section).style.display = 'block';
         }
