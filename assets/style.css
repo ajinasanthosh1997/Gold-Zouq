@@ -68,7 +68,14 @@ body div,p{
 .nav-link:hover {
     color: black; /* Black text color on hover */
 }
-
+.hd-div{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:1rem;
+}
 .nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
