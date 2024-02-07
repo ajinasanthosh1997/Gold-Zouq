@@ -383,7 +383,7 @@ footer h4{
 .image-grid {
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
+    
     margin: 2rem 3rem;
     
 }
@@ -653,6 +653,7 @@ footer h4{
         
         /* align-items: center; */
         margin: 2rem 1rem;
+        align-items: center;
         
     }
     .grid-img1{
