@@ -624,4 +624,12 @@ footer h4{
     .owl-stage{
         margin: 2rem 0;
     }
+    .owl-next{
+        display: none;
+
+    }
+    .owl-prev{
+        display: none;
+        
+    }
 }
