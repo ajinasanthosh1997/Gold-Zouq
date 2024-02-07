@@ -479,7 +479,13 @@ footer h4{
 }  
 .owl-stage{
     margin: 2rem 0;
-}       
+} 
+.owl-next{
+    display: none;
+}
+.owl-prev{
+    display: none;
+}      
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
