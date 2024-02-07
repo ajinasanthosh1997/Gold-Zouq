@@ -528,7 +528,28 @@ footer h4{
     /* height: auto; */
     display: block;
 }
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
 
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
