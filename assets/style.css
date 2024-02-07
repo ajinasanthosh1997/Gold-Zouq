@@ -139,14 +139,7 @@ ul{
 input:focus {
     outline: none;
 }
-.hd-div{
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap:1rem;
-}
+
 .icon1{
     height: 1rem;
 }
@@ -547,8 +540,6 @@ img {
     
     .nav-link:hover::after {
         transform: scaleX(0); /* Set the underline to be hidden */
-        
-
     }
     .icon{
         left:0rem;
