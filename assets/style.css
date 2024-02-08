@@ -75,7 +75,7 @@ body div,p{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     gap:1rem;
 }
 .nav-link:hover::after {
@@ -150,7 +150,8 @@ input:focus {
 }
 
 .icon1{
-    height: 1rem;
+    height: 1.2rem;
+    /* padding: 1rem; */
 }
 .box{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -514,7 +515,12 @@ img {
     z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle elevation effect */"
 }
-
+.ft-img{
+    height: 2.2rem;
+}
+.m{
+    margin: 2rem 6rem;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -688,5 +694,11 @@ img {
         height: 7.5rem;
         width: 19rem;
         padding: .5rem;
+    }
+    .ft-img{
+        height: 2.2rem;
+    }
+    .m{
+        margin: 2rem 0rem;
     }
 }
