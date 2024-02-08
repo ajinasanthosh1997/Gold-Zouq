@@ -503,6 +503,16 @@ img {
 .c3{
     width: 8rem;padding: 1rem 2rem;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);background-color: white;
 }
+.hd12{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Adjust the background color as needed */
+    z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle elevation effect */"
+}
+
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
