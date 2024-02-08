@@ -124,7 +124,7 @@
                 <div style="width:2rem;color:#63392C;" id="toggleBtn" onclick="toggleNav()">&#9776;</div>
                 <div style="color: #63392C;">Menu</div>
             </div>
-            <a href="index.html"><img src="assets/img/gold-zouq.svg" class="res-img"></a>
+            <a href="index.html"><img src="assets/img/gold-zouq-bahrain.svg" class="res-img"></a>
             <div class="">
                 <img src="assets/img/user.svg">
                 <a href="login with otp.html" style="text-decoration: none;color: #63392C;"><div style="text-align: center;">User</div></a>
@@ -287,31 +287,44 @@
                 document.getElementById("mySidenav").style.width = "0";
             }
         </script>
-        
     </div>  
-    <section style="display: flex; justify-content: center;text-align: center;">
-        <div class="log-div">
-            <h1 class="log">Login with phone</h1>
-            <form>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" value="+91" class="log-in">
-                <p style="color: #63392C;">By continuing, I agree to the Terms of Use &<br> Privacy Policy</p>
-                <button type="submit" class="log-bt">Request OTP</button>
-            </form>
-            <div style="display: flex; align-items: center;color: #63392C;margin: 1rem 0;">
-                <div style="flex-grow: 1; border-bottom: 1px dashed;"></div>
-                <div style="padding: 0 10px;">OR</div>
-                <div style="flex-grow: 1; border-bottom: 1px dashed;"></div>
+    <section>
+        <div class="cl-flex">
+            <div>
+                <h1 class="font">Jewellery price calculator</h1>
+                <div class="ftr-icon">
+                    <i class="fa-brands fa-linkedin" style="color:#63392C"></i>
+                    <i class="fa-brands fa-facebook-f" style="color:#63392C"></i>
+                    <i class="fa-brands fa-instagram" style="color:#63392C"></i>
+                </div>
             </div>
-            
-            <div style="margin: 1rem 0;">
-                <a href="login with mail.html" class="log-a1">Login with mail OTP</a>
-            </div>
-            <div style="margin: 3rem 0;"></div>
-                <a href="register.html" class="log-a2">Register</a>
+            <div>
+                <form>
+                    <div>
+                        <h1>Total Amount</h1>
+                        <label>Gold Rate (Rs)</label>
+                        <input type="number">
+                        <label>Stone Weight (grams)</label>
+                        <input type="number">
+                        <label>Making Charge %</label>
+                        <input type="number">
+                        <label>Total Price</label>
+                        <input type="number">   
+                    </div>
+                    <div>
+                        <h1>Making Charge</h1>
+                        <label>Gross Weight (grams)</label>
+                        <input type="number">
+                        <label>Stone Rate</label>
+                        <input type="number">
+                        <button type="submit">Submit</button>
+                    </div>
+                    
+                </form>
+                
             </div>
         </div>
     </section>
-    
     <div id="res1" style="background-color: #F9EFE1; padding: .5rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
         <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
             <div>
@@ -373,8 +386,6 @@
                 </div>
             </div>
         </div>
-        
-        
     </footer>
     <div style="background-color: #63392C;padding: 2rem 4rem;color:white;" id="ft">
         <div style="display: flex;justify-content: space-between;flex-wrap: wrap;">
