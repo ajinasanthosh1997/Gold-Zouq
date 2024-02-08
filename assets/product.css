@@ -175,7 +175,15 @@ section{
 }
 /* calculator.html */
 .cl-flex{
-    
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cl-flex1{
+    display:flex;
+    justify-content: space-around;
 }
 @media only screen and (max-width: 500px) {
     .prct-img{
