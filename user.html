@@ -289,173 +289,31 @@
         </script>
         
     </div>  
-    
-    <section>
-        <div class="prdct">
-            <div>
-                <img src="assets/img/34_gram_Gold_Necklace_-TFJGN001.jpg" class="prct-img">
-            <div class="prdct-flex">
-                <button class="bt1" style="display: flex;align-items: center;"><i class="fa-solid fa-download"></i> &nbsp;&nbsp;&nbsp;Download</button>
-                <button class="bt2" style="display: flex;align-items: center;"><i class="fa-solid fa-share-nodes"></i>&nbsp;&nbsp;Share </i></button>
-            </div>
-            </div>
-            
-            <div>
-                <img src="assets/img/Mahila_Jewellers (1).jpg" class="pr-img">
-                <p><i class="fa-solid fa-location-dot"></i>
-                    Palarivattom</p>
-                <h4>Two Layered Short Gold Necklace</h4>    
-                <p style="font-size: 14px;">Product Code : MHJGN028</p>
-                <h1 style="color: #63392C;">15.010 gm</h1>
-                <p>A two-layered Short Gold Necklace that adds depth to your style</p>
-                <button class="bt3" style="display: flex;align-items: center;"><i class="fa-solid fa-indian-rupee-sign"  style="color: rgb(241, 192, 32);"></i>&nbsp;&nbsp;Check Price </i></button>
-            </div>
-
-        </div>
-    </section>
-    <section style="box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);padding:1rem;">
-        <div style="border-bottom: 1px dashed #63392C;">
-            <div style="padding: 1rem;">
-                <button onclick="showSection('productSpecs')" class="btn">Product Specs</button>
-                <button onclick="showSection('description')" class="btn1">Description</button>
+    <section style="display: flex; justify-content: center;text-align: center;">
+        <div class="log-div">
+            <h1 class="log">Login with phone</h1>
+            <form>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" value="+91" class="log-in">
+                <p style="color: #63392C;">By continuing, I agree to the Terms of Use &<br> Privacy Policy</p>
+                <button type="submit" class="log-bt">Request OTP</button>
+            </form>
+            <div style="display: flex; align-items: center;color: #63392C;margin: 1rem 0;">
+                <div style="flex-grow: 1; border-bottom: 1px dashed;"></div>
+                <div style="padding: 0 10px;">OR</div>
+                <div style="flex-grow: 1; border-bottom: 1px dashed;"></div>
             </div>
             
-        </div>
-        <div id="productSpecs" style="margin-top: 2rem;">
-            <div class="fl">
-                <p>Stone Type</p>
-                <p>No stone available</p>
+            <div style="margin: 1rem 0;">
+                <a href="#" class="log-a1">Login with mail OTP</a>
             </div>
-            <div class="fl">
-                <p>Jeweller</p>
-                <p>Mahila Jewellers</p>
+            <div style="margin: 3rem 0;"></div>
+                <a href="#" class="log-a2">Register</a>
             </div>
-            <div class="fl">
-                <p>Category</p>
-                <p>GOLD</p>
-            </div>
-            <div class="fl">
-                <p>Metal Purity</p>
-                <p>22 Carat</p>
-            </div>
-            <div class="fl">
-                <p>Gender</p>
-                <p>Women</p>
-            </div>
-            <div class="fl">
-                <p>Wearing Style</p>
-                <p>Bridal Wear</p>
-            </div>
-            <div class="fl">
-                <p>Metal Color</p>
-                <p>Yellow</p>
-            </div>
-            <div class="fl">
-                <p>Occasion</p>
-                <p>Wedding</p>
-            </div>
-        </div>
-        <div id="description" style="display: none;">
-            <!-- Content for Description goes here -->
-            <p>A two-layered Short Gold Necklace that adds depth to your style</p>
-        </div>
-    </section>
-    <script>
-        window.onload = function() {
-            // Show 'productSpecs' section by default on page load
-            showSection('productSpecs');
-        };
-    
-        function showSection(section) {
-            // Hide both sections initially
-            document.getElementById('productSpecs').style.display = 'none';
-            document.getElementById('description').style.display = 'none';
-    
-            // Show the selected section
-            document.getElementById(section).style.display = 'block';
-        }
-    </script>
-    <section class="sec3" style="z-index: 0; overflow-y: hidden;">
-        <h1 class="sec-h1" style="font-size: 24px;">Related Products</h1>
-        
-        <div class="owl-carousel b" style="display: flex;justify-content: center;gap:1rem;margin: 2rem 0;" >
-            <div class="card" style="">
-                <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
-                
-                <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
-                
-                <p>Diamond engagement ring...</p>
-                <h3 style="color: #63392C;">6.000 gm</h3>
-            </div>
-            <div class="card">
-                <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
-                
-                <img src="assets/img/logo_-_chungath_jewellery.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
-                
-                <p>Minimal Holy Cross Pendant...</p>
-                <h3 style="color: #63392C;">6.460 gm</h3>
-            </div>
-            <div class="card">
-                <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
-                
-                <img src="assets/img/Mahila_Jewellers.jpg"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
-                
-                <p>Rudraksha Gold Bracelet...</p>
-                <h3 style="color: #63392C;">4.080 gm</h3>
-            </div>
-            <div class="card">
-                <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
-                
-                <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
-                
-                <p>Diamond engagement ring...</p>
-                <h3 style="color: #63392C;">6.000 gm</h3>
-            </div>
-            <div class="card">
-                <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
-                
-                <img src="assets/img/logo_-_chungath_jewellery.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
-                
-                <p>Minimal Holy Cross Pendant...</p>
-                <h3 style="color: #63392C;">6.460 gm</h3>
-            </div>
-            <div class="card">
-                <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
-                
-                <img src="assets/img/Mahila_Jewellers.jpg"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
-                
-                <p>Rudraksha Gold Bracelet...</p>
-                <h3 style="color: #63392C;">4.080 gm</h3>
-            </div>
-            <!-- Add more card items as needed -->
         </div>
     </section>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                dots: false,
-                nav: true, // Show navigation arrows
-                margin: 15,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    1200: {
-                        items: 5
-                    }
-                }
-            });
-        });
-    </script>
+    
+ 
     <div id="res1" style="background-color: #F9EFE1; padding: .5rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
         <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
             <div>
@@ -473,7 +331,7 @@
         </div>
     </div>
     <section style="border-top: 1px dashed #63392C;margin: 3rem 0;"></section>
-    <footer >
+    <footer>
         <div class="flex1" >
             <div>
                 <img src="assets/img/gold-zouq.svg">

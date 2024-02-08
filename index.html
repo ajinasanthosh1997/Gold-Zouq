@@ -307,14 +307,20 @@
             }
         </script>
         <script>
+            // Close the side navigation when the page loads
+            window.onload = function () {
+                closeNav();
+            };
+        
             function toggleNav() {
                 document.getElementById("mySidenav").style.width = "100%";
             }
-
+        
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
             }
         </script>
+        
     </div>    
     <section class="sec-m">
         <div class="carousel" id="c">
@@ -678,7 +684,7 @@
     </section> 
    
 
-    <section id="res1" style="background-color: #F9EFE1; padding: .5rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
+    <div id="res1" style="background-color: #F9EFE1; padding: .5rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
         <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
             <div>
                 <img src="assets/img/icons-home.svg" alt="" style="height: 2rem;">
@@ -693,7 +699,7 @@
                 <div>Reels</div>
             </div>
         </div>
-    </section>
+    </div>
     <section class="sec3">
         <h1 class="sec-h1 dotted-heading" style="font-size: 18px;">Gifting Collections</h1>
         <div style="display: flex;flex-wrap:wrap;justify-content: center;gap:2rem;align-items: center;text-align: center;margin-top: 2rem;" >

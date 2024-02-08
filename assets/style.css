@@ -141,7 +141,7 @@ ul{
 .icon{
     position: relative;
     left: .5rem;
-    top: 1.9rem;
+    top: 1.8rem;
 }
 input:focus {
     outline: none;
@@ -549,7 +549,7 @@ img {
         transform: scaleX(0); /* Set the underline to be hidden */
     }
     .icon{
-        left:0rem;
+        left:-.5rem;
     }
     .hd-flex{
         display: block;

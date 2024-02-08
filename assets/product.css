@@ -78,6 +78,58 @@ section{
 .fl p {
     margin: 0;
 }
+
+/* user.html */
+
+.log{
+    font-family: "DM Serif Display",serif;
+    color: #63392C;
+}
+.log-in{
+    padding: .8rem;
+    width: 17rem;
+    border: 1px solid #d0cece;
+    border-radius: 0.3rem;
+}
+.log-div{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+}
+.log-bt{
+    background-color: #63392C;
+    color: white;
+    padding: 1rem 7rem;
+    border: none;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a1{
+    text-decoration: none;
+    color: #63392C;
+    padding: .8rem 5.5rem;
+    
+    border: 1px solid #63392C;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a1:hover{
+    background-color: #63392C;
+    color: white;
+}
+.log-a2{
+    text-decoration: none;
+    color: #63392C;
+    padding: .8rem 8rem;
+    
+    border: 1px solid #63392C;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a2:hover{
+    background-color: #63392C;
+    color: white;
+}
 @media only screen and (max-width: 500px) {
     .prct-img{
         height: 23rem;
@@ -87,5 +139,20 @@ section{
         
         margin: 2rem 0rem;
     }
+    /* user.html */
+    .log-div{
+       
+        padding: 3rem 1rem;
+    }
+    .log-bt{
+        padding: 1rem 6rem;
+    }
+    .log-a1{
+        padding: .8rem 4.5rem;
+    }
+    .log-a2{
+        padding: .8rem 7rem;
+    }
+
     
 }
