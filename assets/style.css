@@ -469,7 +469,7 @@ footer h4{
 
 .image-text {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 40%;
     transform: translateX(-50%);
     /* background: rgba(255, 255, 255, 0.8); */
