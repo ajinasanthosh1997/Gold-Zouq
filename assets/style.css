@@ -521,6 +521,16 @@ img {
 .m{
     margin: 2rem 6rem;
 }
+.he{
+    height: 20rem;
+}
+.con{
+    height:5rem;
+    width: 2rem;
+    padding: 1rem 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -530,6 +540,9 @@ img {
 }   
     /* Adjust the styles for smaller screens */
 @media only screen and (max-width: 500px) {
+    .he{
+        height: 26rem;
+    }
     .c3{
         width:4rem;
     }
@@ -700,5 +713,8 @@ img {
     }
     .m{
         margin: 2rem 0rem;
+    }
+    .con{
+            padding: 1rem 2rem;
     }
 }
