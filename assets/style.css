@@ -684,7 +684,7 @@ img {
     .image-grid {
         
         /* align-items: center; */
-        margin: 2rem 1rem;
+        margin: 2rem 0rem;
         align-items: center;
         
     }
@@ -715,7 +715,7 @@ img {
         margin: 2rem 0rem;
     }
     .con{
-            padding: 1rem 1.8rem;
+            padding: 1rem 1rem;
     }
     .sec3{
         margin: 2rem 2rem;
