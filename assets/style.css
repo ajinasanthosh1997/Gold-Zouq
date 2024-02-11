@@ -396,6 +396,10 @@ footer h4{
 .card{
     padding: 1rem;
 }
+.cad{
+    padding: 1rem;
+
+}
 .card1{
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     /* background-color: white; */
@@ -664,6 +668,20 @@ img {
     .card{
         padding:0 0rem;
         margin:0rem 3rem;
+        /* box-shadow: none; */
+    }
+    .cad{
+        padding:0 0rem;
+        margin:0rem 3rem;
+        /* box-shadow: none; */
+    }
+    }
+    .cad:hover{
+        box-shadow: none;
+        /* background-color: white; */
+        border-radius: .5rem;
+       
+        
     }
     .owl-stage{
         margin: 2rem 0;
