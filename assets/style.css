@@ -525,8 +525,7 @@ img {
     height: 20rem;
 }
 .con{
-    height:5rem;
-    width: 2rem;
+    
     padding: 1rem 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background-color: white;
@@ -696,6 +695,7 @@ img {
     .grid-img2{
         height: 9rem;
         width: 19rem;
+
         padding: .5rem;
     }
     .grid-img3{
