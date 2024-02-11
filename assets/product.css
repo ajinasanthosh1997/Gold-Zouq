@@ -176,7 +176,7 @@ section{
 /* calculator.html */
 .cl-flex{
     display:flex;
-    align-items: center;
+    
     text-align: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -184,6 +184,29 @@ section{
 .cl-flex1{
     display:flex;
     justify-content: space-around;
+}
+.cl-flex1 input{
+    border: 1px solid #63392C;
+    height: 1.8rem;
+    width: 16rem;
+    margin-bottom: 1rem;
+}
+
+
+  .tick {
+    display: flex;
+    align-items: center;
+  }
+
+.cl-bt{
+    background-color: #63392C;
+    color: white;
+    padding: .7rem 6.6rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+}  
+.pd{
+    padding: 2rem;
 }
 @media only screen and (max-width: 500px) {
     .prct-img{
@@ -217,5 +240,23 @@ section{
 
     .log-a4{
         padding: .8rem 7.5rem;
+    }
+    .cl-flex1 input{
+        width:8rem;
+    }
+    .cl-flex1 label{
+        font-size: 14px;
+    }
+    .cl-bt{
+        padding: .7rem 2.6rem;
+
+    }
+    .font{
+        
+        font-size: 31px;
+        
+    }
+    .pd{
+        padding: 0rem;
     }
 }
