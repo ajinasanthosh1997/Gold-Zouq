@@ -207,6 +207,7 @@ section{
 }  
 .pd{
     padding: 2rem;
+    border-right: 1px solid rgb(233, 230, 230);
 }
 @media only screen and (max-width: 500px) {
     .prct-img{
@@ -245,7 +246,7 @@ section{
         width:8rem;
     }
     .cl-flex1 label{
-        font-size: 14px;
+        font-size: 13px;
     }
     .cl-bt{
         padding: .7rem 2.6rem;
@@ -253,10 +254,17 @@ section{
     }
     .font{
         
-        font-size: 31px;
+        font-size: 25px;
         
     }
     .pd{
         padding: 0rem;
+        border-right: none;
+    }
+    form h1{
+        font-size: 1.2rem;
+    }
+    form h3{
+        font-size: .8rem;
     }
 }
