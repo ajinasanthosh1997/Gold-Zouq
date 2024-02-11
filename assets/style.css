@@ -662,7 +662,7 @@ img {
         padding: 2rem 0;
     }
     .card{
-        /* padding:0 5rem; */
+        padding:0 0rem;
         margin:0rem 3rem;
     }
     .owl-stage{
