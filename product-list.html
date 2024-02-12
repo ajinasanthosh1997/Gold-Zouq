@@ -10,44 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-TsZ0HJ5un8EftmqUcR2RbC5apQxYo1P0ZcxNiiwOJOPTeD7NdmAuRbPw+8RIq7AH9eJhavZRMydrbI9zCuPR4w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://kit.fontawesome.com/57c218bfa9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <style>
-        .input-container {
-      position: relative;
-      margin-bottom: 10px;
-    }
 
-    label {
-      position: absolute;
-      top: 5px;
-      left: 10px;
-      transition: top 0.3s, font-size 0.3s;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      border: none; /* Remove other borders */
-      border-bottom: 1px solid #000; /* Set the bottom border */
-      border-radius: 0; /* Optional: Set border-radius to 0 for a straight bottom border */
-      outline: none; /* Remove the default outline */
-      transition: border-bottom 0.3s;
-    }
-
-    input:focus {
-      border-bottom: 2px solid #63392C; /* Change the bottom border color on focus */
-    }
-
-    /* Adjust label position when input is focused */
-    .input-container input:focus + label {
-      top: -10px;
-      font-size: 12px;
-    }
-    </style>
 </head>
 <body>
     <header id="hd">
@@ -79,7 +47,6 @@
                         <div class="box1">
                             <div style="display: flex;justify-content: center;">
                                 <a href="calculator.html" style="text-decoration: none;color: #63392C;"><img src="assets/img/calculator-svgrepo-com (1).svg" class="icon1"></a>
-
                             </div>
                             <div style="text-align: center;">Calculator</div>
                         </div>
@@ -329,77 +296,147 @@
                 document.getElementById("mySidenav").style.width = "0";
             }
         </script>
+        
     </div>  
     <section>
-        <div class="cl-flex">
-            <div style="" class="pd">
-                <h1 class="font">Become a Seller</h1>
-                <div class="ftr-icon">
-                    <i class="fa-brands fa-linkedin" style="color:#63392C"></i>
-                    <i class="fa-brands fa-facebook-f" style="color:#63392C"></i>
-                    <i class="fa-brands fa-instagram" style="color:#63392C"></i>
+        <div style="display: flex;justify-content: space-around;">
+            <div class="accordion" style=" border: 1px solid rgb(219, 218, 218);border-radius: .2rem;padding: 1rem 1rem;">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Gender</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox" id="men"> <label for="men">Men</label></li>
+                            <li><input type="checkbox" id="women"> <label for="women">Women</label></li>
+                            <li><input type="checkbox" id="kids"> <label for="kids">Kids</label></li>
+                            <li><input type="checkbox" id="newborn"> <label for="newborn">New Born</label></li>
+                        </ul>
+                    </div>
                 </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Brand</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox" id="brand1"> <label for="brand1">Chungath Jewellery</label></li>
+                            <li><input type="checkbox" id="brand2"> <label for="brand2">Jos Jewellery</label></li>
+                            <li><input type="checkbox" id="brand3"> <label for="brand3">Vellanikaran Gold and Diamonds</label></li>
+                            <li><input type="checkbox" id="brand4"> <label for="brand4">Akkara Jewellers</label></li>
+                            <li><input type="checkbox" id="brand5"> <label for="brand5">Mahila Jewellers</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Collections</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="radio" name="collection" id="gold"> <label for="gold">GOLD</label></li>
+                            <li><input type="radio" name="collection" id="weddingRings"> <label for="weddingRings">WEDDING RINGS</label></li>
+                            <li><input type="radio" name="collection" id="diamond"> <label for="diamond">DIAMOND</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Categories</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox" id="ring"> <label for="ring">Ring</label></li>
+                            <li><input type="checkbox" id="pendant"> <label for="pendant">Pendant</label></li>
+                            <li><input type="checkbox" id="bangle"> <label for="bangle">Bangle</label></li>
+                            <li><input type="checkbox" id="bracelet"> <label for="bracelet">Bracelet</label></li>
+                            <li><input type="checkbox" id="studs"> <label for="studs">Studs</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Gold Purity</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox" id="gold24CT"> <label for="gold24CT">24 CT</label></li>
+                            <li><input type="checkbox" id="gold22CT"> <label for="gold22CT">22 CT</label></li>
+                            <li><input type="checkbox" id="gold18CT"> <label for="gold18CT">18 CT</label></li>
+                            <li><input type="checkbox" id="gold14CT"> <label for="gold14CT">14 CT</label></li>
+                            <li><input type="checkbox" id="gold95CT"> <label for="gold95CT">95.00 CT</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Metal Color</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox" id="white"> <label for="white">White</label></li>
+                            <li><input type="checkbox" id="rose"> <label for="rose">Rose</label></li>
+                            <li><input type="checkbox" id="yellow"> <label for="yellow">Yellow</label></li>
+                            <li><input type="checkbox" id="dualTone"> <label for="dualTone">Dual Tone</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <div class="card12 ftrlist">
+                    <div class="card-header" onclick="toggleAccordion(this)">
+                        <h3>Gift by Occasion</h3>
+                        <span class="toggle-icon fa fa-plus"></span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><input type="checkbox" id="wedding"> <label for="wedding">Wedding</label></li>
+                            <li><input type="checkbox" id="gifting"> <label for="gifting">Gifting</label></li>
+                            <li><input type="checkbox" id="office"> <label for="office">Office</label></li>
+                            <li><input type="checkbox" id="engagement"> <label for="engagement">Engagement</label></li>
+                            <li><input type="checkbox" id="valentinesDay"> <label for="valentinesDay">Valentine's Day</label></li>>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Add more accordion items as needed -->
             </div>
+            <script>
+                function toggleAccordion(header) {
+                  const body = header.nextElementSibling;
+                  const icon = header.querySelector('.toggle-icon');
+                  const more = body.nextElementSibling;
+              
+                  if (body.style.display === 'block') {
+                    body.style.display = 'none';
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                    more.style.display = 'block';
+                  } else {
+                    body.style.display = 'block';
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                    more.style.display = 'none';
+                  }
+                }
+            </script>
             <div>
-                <form id="" class="sl-flex">
-                    <div>
-                        
-                        <div class="input-container">
-                            <input type="text">
-                            <label>Store Name</label>  
-                        </div>
-                        <div class="input-container">
-                            <input type="text">
-                            <label>Contact Person Name</label>
-                        </div>
-                        <div class="input-container">
-                            <input type="tel">
-                            <label>Contact Number</label>
-                        </div>
-                        
-                    </div>
-                    <div>
-                        <div class="input-container">
-                            <input type="text">
-                            <label>Website/Instagram Handle</label>
-                        </div>
-                        <div class="input-container">
-                            <input type="text">
-                            <label>Designation</label>
-                        </div>
-                        <div class="input-container">
-                            <input type="email">
-                            <label>Email</label>
-                        </div>
-                        <button type="submit" class="sl-bt"><i class="fa-regular fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;Submit</button>
-                        
-                    </div>
-                    
-                </form>
-                <script>
-                    // Add event listeners to all input elements within the form
-                    document.querySelectorAll('.sl-flex input').forEach(function(input) {
-                        input.addEventListener('focus', function() {
-                            // Move the label to the top when input is focused
-                            input.previousElementSibling.style.transform = 'translateY(-20px)';
-                            input.previousElementSibling.style.fontSize = '12px';
-                            input.previousElementSibling.style.color = '#333';
-                        });
-                
-                        input.addEventListener('blur', function() {
-                            // Move the label back down when input loses focus if there is no value
-                            if (!input.value) {
-                                input.previousElementSibling.style.transform = 'translateY(0)';
-                                input.previousElementSibling.style.fontSize = '';
-                                input.previousElementSibling.style.color = '';
-                            }
-                        });
-                    });
-                </script>
-                
+                <p>gfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
             </div>
         </div>
-    </section>
+    </section>   
+    
+ 
     <div id="res1" style="background-color: #F9EFE1; padding: .4rem .2rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
         <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
             <div>
@@ -467,6 +504,8 @@
                 </div>
             </div>
         </div>
+        
+        
     </footer>
     <div style="background-color: #63392C;padding: 2rem 4rem;color:white;" id="ft">
         <div style="display: flex;justify-content: space-between;flex-wrap: wrap;">

@@ -4,52 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Add some basic styling to the label and input container */
-    .input-container {
-      position: relative;
-      margin-bottom: 20px;
+    .card-body {
+      max-height: 120px; /* Set an initial max-height for transition */
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
     }
 
-    label {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      transition: top 0.3s, font-size 0.3s;
+    #see-more-brands {
+      cursor: pointer;
+      color: #007BFF; /* Blue color */
+      text-decoration: underline;
+      display: block; /* Make the link a block element for better visibility */
+      margin-top: 5px; /* Add some spacing between the link and the list */
+      transition: color 0.3s; /* Add a smooth color transition on hover */
     }
 
-    input {
-      width: 100%;
-      padding: 10px;
-      border: none; /* Remove other borders */
-      border-bottom: 1px solid #000; /* Set the bottom border */
-      border-radius: 0; /* Optional: Set border-radius to 0 for a straight bottom border */
-      outline: none; /* Remove the default outline */
-      transition: border-bottom 0.3s;
-    }
-
-    input:focus {
-      border-bottom: 2px solid #3366cc; /* Change the bottom border color on focus */
-    }
-
-    /* Adjust label position when input is focused */
-    .input-container input:focus + label {
-      top: -10px;
-      font-size: 12px;
+    #see-more-brands:hover {
+      color: #0056b3; /* Darker blue on hover */
     }
   </style>
-  <title>Label Move Upward Example</title>
+  <title>Brand List</title>
 </head>
 <body>
 
-  <div class="input-container">
-    <input type="text" id="username">
-    <label for="username">Username:</label>
-  </div>
+<div class="card-body">
+  <ul>
+    <li><input type="checkbox" id="brand1"> <label for="brand1">Chungath Jewellery</label></li>
+    <li><input type="checkbox" id="brand2"> <label for="brand2">Jos Jewellery</label></li>
+    <li><input type="checkbox" id="brand3"> <label for="brand3">Vellanikaran Gold and Diamonds</label></li>
+    <li><input type="checkbox" id="brand4"> <label for="brand4">Akkara Jewellers</label></li>
+    <li><input type="checkbox" id="brand5"> <label for="brand5">Mahila Jewellers</label></li>
+  </ul>
+  <a href="#" id="see-more-brands" onclick="toggleBrands()">See more</a>
+</div>
 
-  <div class="input-container">
-    <input type="password" id="password">
-    <label for="password">Password:</label>
-  </div>
+<script>
+  function toggleBrands() {
+    var brandsContainer = document.querySelector('.card-body');
+    brandsContainer.style.maxHeight = brandsContainer.style.maxHeight ? null : '100%';
+  }
+</script>
 
 </body>
 </html>

@@ -250,7 +250,57 @@ section{
     height: 31rem;width: 25rem;
     
 }
+.accordian {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .card12 {
+    
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 200px; /* Set an initial max-height for transition */
+  }
+
+  .card-header {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap:6rem;
+    align-items: center;
+    
+  }
+
+  .card-body {
+    display: none;
+    /* padding: 10px; */
+    height: max-content;
+    animation: fadeInOut 0.3s ease-in-out;
+  }
+  @keyframes fadeInOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .card-body ul{
+    padding:1rem 0;
+  }
+  .more {
+    padding: 10px;
+    
+    display: none;
+  }
+  .ftr-list{
+    margin: 2rem 0;
+  }
+ .accordion{
+   
+ } 
 @media only screen and (max-width: 500px) {
     .video{
        
