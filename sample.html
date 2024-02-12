@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling to the label and input container */
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      transition: top 0.3s, font-size 0.3s;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none; /* Remove other borders */
+      border-bottom: 1px solid #000; /* Set the bottom border */
+      border-radius: 0; /* Optional: Set border-radius to 0 for a straight bottom border */
+      outline: none; /* Remove the default outline */
+      transition: border-bottom 0.3s;
+    }
+
+    input:focus {
+      border-bottom: 2px solid #3366cc; /* Change the bottom border color on focus */
+    }
+
+    /* Adjust label position when input is focused */
+    .input-container input:focus + label {
+      top: -10px;
+      font-size: 12px;
+    }
+  </style>
+  <title>Label Move Upward Example</title>
+</head>
+<body>
+
+  <div class="input-container">
+    <input type="text" id="username">
+    <label for="username">Username:</label>
+  </div>
+
+  <div class="input-container">
+    <input type="password" id="password">
+    <label for="password">Password:</label>
+  </div>
+
+</body>
+</html>

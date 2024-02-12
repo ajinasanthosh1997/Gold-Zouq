@@ -222,22 +222,41 @@ section{
     text-align: left;
 }
 .sl-flex input{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(210, 209, 209);
     border-left: none;
     border-right: none;
     border-top: none;
     margin-bottom: 2rem;
     width: 28rem;
 }
+.sl-flex label{
+    font-size: .9rem;
+    transition: transform 0.3s ease-in-out;
+}
+.sl-flex input:focus + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #333;
+}
+.sl-bt{
+    background-color: #63392C;
+    color: white;
+    padding: .7rem 2rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+
 @media only screen and (max-width: 500px) {
     .cl-flex{
         justify-content: left;
     }
     .sl-flex{
         gap:0rem;
+        justify-content: left;
     }
     .sl-flex input{
-        width: 20rem;
+        width: 18rem;
     }
     .prct-img{
         height: 23rem;
