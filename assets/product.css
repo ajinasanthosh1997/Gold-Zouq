@@ -186,12 +186,15 @@ section{
     justify-content: space-around;
 }
 .cl-flex1 input{
-    border: 1px solid #63392C;
+    border: 1px solid #c17324;
     height: 1.8rem;
     width: 16rem;
     margin-bottom: 1rem;
 }
-
+.cl-fl {
+    flex: 1;
+    cursor: pointer;
+}
 
   .tick {
     display: flex;
@@ -209,7 +212,33 @@ section{
     padding: 2rem;
     border-right: 1px solid rgb(233, 230, 230);
 }
+/* seller.html */
+.sl-flex{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    text-align: left;
+}
+.sl-flex input{
+    border-bottom: 1px solid gray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin-bottom: 2rem;
+    width: 28rem;
+}
 @media only screen and (max-width: 500px) {
+    .cl-flex{
+        justify-content: left;
+    }
+    .sl-flex{
+        gap:0rem;
+    }
+    .sl-flex input{
+        width: 20rem;
+    }
     .prct-img{
         height: 23rem;
         width: 23rem;

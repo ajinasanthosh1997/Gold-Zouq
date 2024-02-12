@@ -309,8 +309,8 @@
                 </div>
             </div>
             <div>
-                <form class="cl-flex1">
-                    <div class="cl-fl">
+                <form id="myForm" class="cl-flex1">
+                    <div class="cl-fl" onclick="toggleSections()">
                         <h1>Total Amount</h1>
                         <div>
                             <div>
@@ -345,7 +345,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="cl-fl" onclick="toggleSections()">
                         <h1>Making Charge</h1>
                         <div>
                             <div>
@@ -371,6 +371,22 @@
                     </div>
                     
                 </form>
+                <script>
+                    // JavaScript code to toggle between Total Amount and Making Charge sections
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const totalAmountSection = document.querySelector('.cl-fl');
+                        const makingChargeSection = document.querySelector('.cl-flex1 > div:last-child');
+            
+                        totalAmountSection.addEventListener('click', function () {
+                            totalAmountSection.parentElement.insertBefore(makingChargeSection, totalAmountSection.nextSibling);
+                        });
+            
+                        makingChargeSection.addEventListener('click', function () {
+                            makingChargeSection.parentElement.insertBefore(totalAmountSection, makingChargeSection.nextSibling);
+                        });
+                    });
+                </script>
+                
                 <p>3% GST is applicable for all gold, diamond and platinum ornaments and is implied on all our calculations.</p>
                 
             </div>
@@ -404,7 +420,7 @@
             <div>
                 <img src="assets/img/gold-zouq_1.svg" class="ft-img">
                 <div style="margin-top: 1rem;margin-bottom: 2rem;">
-                    <a href="#" class="ftr-a">Become a Seller</a>
+                    <a href="seller.html" class="ftr-a">Become a Seller</a>
                 </div>
             </div>
             <div class="ftr">

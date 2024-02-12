@@ -212,7 +212,7 @@
         <script>
             // Show the default content (gold) when the page loads
             // Show the default content (gold) when the page loads for both main and responsive navigation
-            window.onload = function () {
+            
             // Get the screen width
             var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
@@ -226,7 +226,7 @@
             // if (screenWidth <= 600) {
             //     toggleBtn.style.display = "none";
             // }
-            };
+            
             function showContent(contentType, navType) {
                 // Remove the 'selected' class from all nav-links (Main Navigation)
                 document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -316,8 +316,8 @@
             }
         </script>
         <script>
-            // Close the side navigation when the page loads
-            window.onload = function () {
+              // Close the side navigation when the page loads
+              window.onload = function () {
                 closeNav();
             };
         
@@ -408,10 +408,10 @@
         <div style="flex-grow: 1; border-bottom: 1px dashed;"></div>
     </div>
     <div class="sec2-flex">
-        <a href="#" onclick="showContent(event, 'women')" class="nav-link1 selected">Women</a>
-        <a href="#" onclick="showContent(event, 'men')" class="nav-link1">Men</a>
-        <a href="#" onclick="showContent(event, 'kids')" class="nav-link1">Kids</a>
-        <a href="#" onclick="showContent(event, 'newborn')" class="nav-link1">New Born</a>
+        <a href="#" onclick="showContent1(event, 'women')" class="nav-link1 selected">Women</a>
+        <a href="#" onclick="showContent1(event, 'men')" class="nav-link1">Men</a>
+        <a href="#" onclick="showContent1(event, 'kids')" class="nav-link1">Kids</a>
+        <a href="#" onclick="showContent1(event, 'newborn')" class="nav-link1">New Born</a>
     </div>
 
     <div id="womenContent" class="content">
@@ -551,9 +551,9 @@
 
 <script>
     // Show the content for the first option (Women) by default
-    showContent(null, 'women');
+    showContent1(null, 'women');
 
-    function showContent(event, category) {
+    function showContent1(event, category) {
         if (event) {
             // Prevent the default anchor behavior (scrolling to the top)
             event.preventDefault();
@@ -962,7 +962,7 @@
             <div>
                 <img src="assets/img/gold-zouq_1.svg" class="ft-img">
                 <div style="margin-top: 1rem;margin-bottom: 2rem;">
-                    <a href="#" class="ftr-a">Become a Seller</a>
+                    <a href="seller.html" class="ftr-a">Become a Seller</a>
                 </div>
             </div>
             <div class="ftr">
