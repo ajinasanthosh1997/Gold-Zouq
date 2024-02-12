@@ -254,7 +254,7 @@ section{
 @media only screen and (max-width: 500px) {
     .video{
        
-        height: 26rem;
+        height: 30rem;
         width: 20rem;
     }
     .cl-flex{
