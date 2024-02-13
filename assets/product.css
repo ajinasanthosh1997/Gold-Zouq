@@ -70,64 +70,96 @@ section {
     margin: 0;
 }
 
-.log {
-    font-family: "DM Serif Display", serif;
+
+
+.log{
+    font-family: "DM Serif Display",serif;
     color: #63392C;
 }
-
-.log-in {
-    padding: 0.8rem;
+.log-in{
+    padding: .8rem;
     width: 17rem;
     border: 1px solid #d0cece;
     border-radius: 0.3rem;
 }
-
-.log-div {
+.log-div{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     padding: 3rem 2rem;
 }
-
-.log-bt,
-.log-a1,
-.log-a2,
-.log-a3,
-.log-a4 {
-    text-decoration: none;
-    padding: 0.8rem;
-    font-size: 16px;
-    border-radius: 0.3rem;
-}
-
-.log-bt,
-.log-a1,
-.log-a2,
-.log-a3,
-.log-a4 {
-    color: #63392C;
-}
-
-.log-bt:hover,
-.log-a1:hover,
-.log-a2:hover,
-.log-a3:hover,
-.log-a4:hover {
-    background-color: #63392C;
-    color: white;
-}
-
-.reg {
-    margin: 1rem 0;
-}
-
-.log-bt1 {
+.log-bt{
     background-color: #63392C;
     color: white;
     padding: 1rem 7rem;
     border: none;
-    border-radius: 0.3rem;
+    border-radius: .3rem;
     font-size: 16px;
 }
+.log-a1{
+    text-decoration: none;
+    color: #63392C;
+    padding: .8rem 5.5rem;
+    
+    border: 1px solid #63392C;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a1:hover{
+    background-color: #63392C;
+    color: white;
+}
+.log-a2{
+    text-decoration: none;
+    color: #63392C;
+    padding: .8rem 8rem;
+    
+    border: 1px solid #63392C;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a3{
+    text-decoration: none;
+    color: #63392C;
+    padding: .8rem 5rem;
+    
+    border: 1px solid #63392C;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a3:hover{
+    background-color: #63392C;
+    color: white;
+}
+.log-a2:hover{
+    background-color: #63392C;
+    color: white;
+}
+
+.log-a4{
+    text-decoration: none;
+    color: #63392C;
+    padding: .8rem 7.5rem;
+    
+    border: 1px solid #63392C;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.log-a4:hover{
+    background-color: #63392C;
+    color: white;
+}
+.log-bt1{
+    background-color: #63392C;
+    color: white;
+    padding: 1rem 7rem;
+    border: none;
+    border-radius: .3rem;
+    font-size: 16px;
+}
+.reg {
+    margin: 1rem 0;
+}
+
 
 .font {
     font-family: "DM Serif Display", serif;
