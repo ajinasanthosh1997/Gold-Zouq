@@ -324,71 +324,87 @@
     </section>
     <section style="box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);padding:1rem;">
         <div style="border-bottom: 1px dashed #63392C;">
-            <div style="padding: 1rem;">
-                <button onclick="showSection('productSpecs')" class="btn">Product Specs</button>
-                <button onclick="showSection('description')" class="btn1">Description</button>
+            <div style="padding: 1rem;" class="but">
+                <button onclick="showSection('productSpecs')" id="btnProductSpecs" class="btn">Product Specs</button>
+                <button onclick="showSection('description')" id="btnDescription" class="btn1">Description</button>
             </div>
             
         </div>
-        <div id="productSpecs" style="margin-top: 2rem;">
-            <div class="fl">
-                <p>Stone Type</p>
-                <p>No stone available</p>
+        <div id="productSpecs" style="margin-top: 2rem;" >
+            <div class="ch">
+                <div>
+                    <div class="fl">
+                        <p>Stone Type</p>
+                        <p>No stone available</p>
+                    </div>
+                    <div class="fl">
+                        <p>Jeweller</p>
+                        <p>Mahila Jewellers</p>
+                    </div>
+                    <div class="fl">
+                        <p>Category</p>
+                        <p>GOLD</p>
+                    </div>
+                    <div class="fl">
+                        <p>Metal Purity</p>
+                        <p>22 Carat</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="fl">
+                        <p>Gender</p>
+                        <p>Women</p>
+                    </div>
+                    <div class="fl">
+                        <p>Wearing Style</p>
+                        <p>Bridal Wear</p>
+                    </div>
+                    <div class="fl">
+                        <p>Metal Color</p>
+                        <p>Yellow</p>
+                    </div>
+                    <div class="fl">
+                        <p>Occasion</p>
+                        <p>Wedding</p>
+                    </div>
+                </div>
             </div>
-            <div class="fl">
-                <p>Jeweller</p>
-                <p>Mahila Jewellers</p>
-            </div>
-            <div class="fl">
-                <p>Category</p>
-                <p>GOLD</p>
-            </div>
-            <div class="fl">
-                <p>Metal Purity</p>
-                <p>22 Carat</p>
-            </div>
-            <div class="fl">
-                <p>Gender</p>
-                <p>Women</p>
-            </div>
-            <div class="fl">
-                <p>Wearing Style</p>
-                <p>Bridal Wear</p>
-            </div>
-            <div class="fl">
-                <p>Metal Color</p>
-                <p>Yellow</p>
-            </div>
-            <div class="fl">
-                <p>Occasion</p>
-                <p>Wedding</p>
-            </div>
+            
+            
         </div>
         <div id="description" style="display: none;">
             <!-- Content for Description goes here -->
             <p>A two-layered Short Gold Necklace that adds depth to your style</p>
         </div>
     </section>
+    
     <script>
         window.onload = function() {
             // Show 'productSpecs' section by default on page load
             showSection('productSpecs');
         };
-    
-        function showSection(section) {
-            // Hide both sections initially
+        function showSection(sectionId) {
+            // Hide all sections
             document.getElementById('productSpecs').style.display = 'none';
             document.getElementById('description').style.display = 'none';
-    
+
             // Show the selected section
-            document.getElementById(section).style.display = 'block';
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Remove 'active' class from all buttons
+            document.getElementById('btnProductSpecs').classList.remove('active');
+            document.getElementById('btnDescription').classList.remove('active');
+
+            // Add 'active' class to the clicked button
+            document.getElementById('btn' + sectionId.charAt(0).toUpperCase() + sectionId.slice(1)).classList.add('active');
         }
+
     </script>
     <section class="sec3" style="z-index: 0; overflow-y: hidden;">
         <h1 class="sec-h1" style="font-size: 24px;">Related Products</h1>
         
         <div class="owl-carousel b" style="display: flex;justify-content: center;gap:1rem;margin: 2rem 0;" >
-            <div class="card" style="">
+            <div class="cad" style="">
                 <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
@@ -396,7 +412,7 @@
                 <p>Diamond engagement ring...</p>
                 <h3 style="color: #63392C;">6.000 gm</h3>
             </div>
-            <div class="card">
+            <div class="cad">
                 <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/logo_-_chungath_jewellery.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
@@ -404,7 +420,7 @@
                 <p>Minimal Holy Cross Pendant...</p>
                 <h3 style="color: #63392C;">6.460 gm</h3>
             </div>
-            <div class="card">
+            <div class="cad">
                 <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/Mahila_Jewellers.jpg"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
@@ -412,7 +428,7 @@
                 <p>Rudraksha Gold Bracelet...</p>
                 <h3 style="color: #63392C;">4.080 gm</h3>
             </div>
-            <div class="card">
+            <div class="cad">
                 <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/logo-png_T0chbRA.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
@@ -420,7 +436,7 @@
                 <p>Diamond engagement ring...</p>
                 <h3 style="color: #63392C;">6.000 gm</h3>
             </div>
-            <div class="card">
+            <div class="cad">
                 <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/logo_-_chungath_jewellery.png"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">
@@ -428,7 +444,7 @@
                 <p>Minimal Holy Cross Pendant...</p>
                 <h3 style="color: #63392C;">6.460 gm</h3>
             </div>
-            <div class="card">
+            <div class="cad">
                 <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
                 
                 <img src="assets/img/Mahila_Jewellers.jpg"  style="width:7rem;height: 3rem;padding: 1rem 3rem;">

@@ -529,7 +529,25 @@ img {
 .he{
     height: 20rem;
 }
+.fl{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: left;
+    gap: 4rem;
 
+}
+.l{
+    text-align: left;
+}
+.ch{
+    display: flex;justify-content: left;gap:24rem;align-items: left;text-align: left;padding:0 2rem;
+}
+.but{
+    display: flex;
+    justify-content: left;
+    gap:1rem;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -539,6 +557,10 @@ img {
 }   
     /* Adjust the styles for smaller screens */
 @media only screen and (max-width: 500px) {
+    .ch{
+        display: block;
+        padding: 0 0;
+    }
     .he{
         height: 26rem;
     }
@@ -666,12 +688,12 @@ img {
     }
     .card{
         padding:0 0rem;
-        margin:0rem 3rem;
+        margin:0rem rem;
         /* box-shadow: none; */
     }
     .cad{
         padding:0 0rem;
-        margin:0rem 3rem;
+        margin:0rem 5rem;
         /* box-shadow: none; */
     }
     .cad:hover{

@@ -242,11 +242,17 @@
         
     </div>  
     <section>
-        <div style="display: flex;justify-content: space-around;flex-wrap: wrap;">
+        <div style="display: flex;justify-content: left;gap:4rem;flex-wrap: wrap;margin: 2rem 4rem;">
             <div class="accordion" style=" border: 1px solid rgb(219, 218, 218);border-radius: .2rem;padding: 1rem 1rem;">
+                <div class="fil" style="border-bottom: 1px solid rgb(240, 239, 239);">
+                    <div>
+                        <h3>Filter</h3>
+                    </div>
+                    <div>Clear Filter</div>
+                </div>
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Gender</h3>
+                        <p>Gender</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
@@ -261,14 +267,14 @@
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Brand</h3>
+                        <p>Brand</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
                         <ul>
                             <li><input type="checkbox" id="brand1"> <label for="brand1">Chungath Jewellery</label></li>
                             <li><input type="checkbox" id="brand2"> <label for="brand2">Jos Jewellery</label></li>
-                            <li><input type="checkbox" id="brand3"> <label for="brand3">Vellanikaran Gold and Diamonds</label></li>
+                            <li><input type="checkbox" id="brand3"> <label for="brand3">Vellanikaran Gold and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diamonds</label></li>
                             <li><input type="checkbox" id="brand4"> <label for="brand4">Akkara Jewellers</label></li>
                             <li><input type="checkbox" id="brand5"> <label for="brand5">Mahila Jewellers</label></li>
                         </ul>
@@ -277,7 +283,7 @@
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Collections</h3>
+                        <p>Collections</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
@@ -291,7 +297,7 @@
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Categories</h3>
+                        <p>Categories</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
@@ -307,7 +313,7 @@
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Gold Purity</h3>
+                        <p>Gold Purity</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
@@ -323,7 +329,7 @@
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Metal Color</h3>
+                        <p>Metal Color</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
@@ -338,7 +344,7 @@
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
-                        <h3>Gift by Occasion</h3>
+                        <p>Gift by Occasion</p>
                         <span class="toggle-icon fa fa-plus"></span>
                     </div>
                     <div class="card-body">
@@ -347,7 +353,7 @@
                             <li><input type="checkbox" id="gifting"> <label for="gifting">Gifting</label></li>
                             <li><input type="checkbox" id="office"> <label for="office">Office</label></li>
                             <li><input type="checkbox" id="engagement"> <label for="engagement">Engagement</label></li>
-                            <li><input type="checkbox" id="valentinesDay"> <label for="valentinesDay">Valentine's Day</label></li>>
+                            <li><input type="checkbox" id="valentinesDay"> <label for="valentinesDay">Valentine's Day</label></li>
                         </ul>
                     </div>
                 </div>
@@ -373,8 +379,19 @@
                   }
                 }
             </script>
-            <div>
-                <p>gfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+            <div >
+                <div>
+                    <a href="#">GOLD</a>
+                </div>
+                <div class="prdct1-flex">
+                    <p>Showing 1-218 products of 218 products</p>
+                    <div>
+                        <button>Trending</button>
+                        <button>Bridals</button>
+                    </div>
+                </div>
+                <hr style="border: 1px solid rgb(240, 239, 239);">
+                
             </div>
         </div>
     </section>   

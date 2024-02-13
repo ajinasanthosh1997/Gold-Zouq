@@ -1,69 +1,60 @@
-.prct-img{
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Switzer', sans-serif;
+}
+
+.prct-img {
     height: 35rem;
     width: 35rem;
 }
-section{
-    margin: 2rem 2rem;
 
+section {
+    margin: 2rem 2rem;
 }
-.prdct-flex{
+
+.prdct-flex {
     display: flex;
     justify-content: left;
     gap: 2rem;
     margin: 2rem 6rem;
 }
-.bt1{
-    padding: .7rem 3rem;
-    border-radius: 2rem;
-    border: 1px solid #63392C;
-    background-color: white;
-    color: #63392C;
 
-}
-.bt1:hover{
-    border-radius: .2rem;
-
-}
-.bt2:hover{
-    border-radius: .2rem;
-
-}
-.bt2{
-    padding: .7rem 3rem;
+.bt1,
+.bt2,
+.bt3 {
+    padding: 0.7rem 3rem;
     border-radius: 2rem;
     border: 1px solid #63392C;
     background-color: white;
     color: #63392C;
 }
-.bt3{
-    padding: .7rem 3rem;
-    border-radius: 2rem;
-    border: 1px solid #63392C;
-    background-color: white;
-    color: #63392C;
 
+.bt1:hover,
+.bt2:hover {
+    border-radius: 0.2rem;
 }
-.prdct{
+
+.prdct {
     display: flex;
     justify-content: center;
-    gap:4rem;
+    gap: 4rem;
     flex-wrap: wrap;
 }
-.pr-img{
+
+.pr-img {
     height: 6rem;
     width: 10rem;
 }
-.btn{
-    border: none;
-    background-color: white;
-    font-size: 1rem;
 
-}
-.btn1{
+.btn,
+.btn1 {
     border: none;
     background-color: white;
     font-size: 1rem;
 }
+
 #productSpecs {
     display: none;
 }
@@ -79,149 +70,122 @@ section{
     margin: 0;
 }
 
-/* user.html */
-
-.log{
-    font-family: "DM Serif Display",serif;
+.log {
+    font-family: "DM Serif Display", serif;
     color: #63392C;
 }
-.log-in{
-    padding: .8rem;
+
+.log-in {
+    padding: 0.8rem;
     width: 17rem;
     border: 1px solid #d0cece;
     border-radius: 0.3rem;
 }
-.log-div{
+
+.log-div {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     padding: 3rem 2rem;
 }
-.log-bt{
-    background-color: #63392C;
-    color: white;
-    padding: 1rem 7rem;
-    border: none;
-    border-radius: .3rem;
-    font-size: 16px;
-}
-.log-a1{
+
+.log-bt,
+.log-a1,
+.log-a2,
+.log-a3,
+.log-a4 {
     text-decoration: none;
-    color: #63392C;
-    padding: .8rem 5.5rem;
-    
-    border: 1px solid #63392C;
-    border-radius: .3rem;
+    padding: 0.8rem;
     font-size: 16px;
+    border-radius: 0.3rem;
 }
-.log-a1:hover{
+
+.log-bt,
+.log-a1,
+.log-a2,
+.log-a3,
+.log-a4 {
+    color: #63392C;
+}
+
+.log-bt:hover,
+.log-a1:hover,
+.log-a2:hover,
+.log-a3:hover,
+.log-a4:hover {
     background-color: #63392C;
     color: white;
 }
-.log-a2{
-    text-decoration: none;
-    color: #63392C;
-    padding: .8rem 8rem;
-    
-    border: 1px solid #63392C;
-    border-radius: .3rem;
-    font-size: 16px;
-}
-.log-a3{
-    text-decoration: none;
-    color: #63392C;
-    padding: .8rem 5rem;
-    
-    border: 1px solid #63392C;
-    border-radius: .3rem;
-    font-size: 16px;
-}
-.log-a3:hover{
-    background-color: #63392C;
-    color: white;
-}
-.log-a2:hover{
-    background-color: #63392C;
-    color: white;
-}
-/* register.html */
-.reg{
+
+.reg {
     margin: 1rem 0;
 }
-.log-a4{
-    text-decoration: none;
-    color: #63392C;
-    padding: .8rem 7.5rem;
-    
-    border: 1px solid #63392C;
-    border-radius: .3rem;
-    font-size: 16px;
-}
-.log-a4:hover{
-    background-color: #63392C;
-    color: white;
-}
-.log-bt1{
+
+.log-bt1 {
     background-color: #63392C;
     color: white;
     padding: 1rem 7rem;
     border: none;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     font-size: 16px;
 }
-.font{
-    font-family: "DM Serif Display",serif;
+
+.font {
+    font-family: "DM Serif Display", serif;
     font-size: 2rem;
     color: #63392C;
 }
-/* calculator.html */
-.cl-flex{
-    display:flex;
-    
+
+.cl-flex {
+    display: flex;
     text-align: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.cl-flex1{
-    display:flex;
+
+.cl-flex1 {
+    display: flex;
     justify-content: space-around;
 }
-.cl-flex1 input{
+
+.cl-flex1 input {
     border: 1px solid #c17324;
     height: 1.8rem;
     width: 16rem;
     margin-bottom: 1rem;
 }
+
 .cl-fl {
     flex: 1;
     cursor: pointer;
 }
 
-  .tick {
+.tick {
     display: flex;
     align-items: center;
-  }
+}
 
-.cl-bt{
+.cl-bt {
     background-color: #63392C;
     color: white;
-    padding: .7rem 6.6rem;
+    padding: 0.7rem 6.6rem;
     margin: 1.5rem 0;
     font-size: 1rem;
-}  
-.pd{
+}
+
+.pd {
     padding: 2rem;
     border-right: 1px solid rgb(233, 230, 230);
 }
-/* seller.html */
-.sl-flex{
+
+.sl-flex {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    /* align-items: center; */
     text-align: left;
 }
-.sl-flex input{
+
+.sl-flex input {
     border-bottom: 1px solid rgb(210, 209, 209);
     border-left: none;
     border-right: none;
@@ -229,150 +193,211 @@ section{
     margin-bottom: 2rem;
     width: 28rem;
 }
-.sl-flex label{
-    font-size: .9rem;
+
+.sl-flex label {
+    font-size: 0.9rem;
     transition: transform 0.3s ease-in-out;
 }
-.sl-flex input:focus + label {
+
+.sl-flex input:focus+label {
     transform: translateY(-20px);
     font-size: 12px;
     color: #333;
 }
-.sl-bt{
+
+.sl-bt {
     background-color: #63392C;
     color: white;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     margin: 1.5rem 0;
     font-size: 1rem;
     border-radius: 0.4rem;
+    border: none;
 }
-.video{
-    height: 31rem;width: 25rem;
-    
+
+.video {
+    height: 31rem;
+    width: 25rem;
 }
+
 .accordian {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .card12 {
-    
+.card12 {
     margin-bottom: 10px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-    max-height: 200px; /* Set an initial max-height for transition */
-  }
+    max-height: auto; /* Set an initial max-height for transition */
+}
 
-  .card-header {
+.card-header {
     cursor: pointer;
-    padding: 10px;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
-    gap:6rem;
+    gap: 6rem;
     align-items: center;
-    
-  }
+}
 
-  .card-body {
+.card-body {
     display: none;
-    /* padding: 10px; */
     height: max-content;
     animation: fadeInOut 0.3s ease-in-out;
-  }
-  @keyframes fadeInOut {
+}
+
+@keyframes fadeInOut {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  .card-body ul{
-    padding:1rem 0;
-  }
-  .more {
-    padding: 10px;
-    
-    display: none;
-  }
-  .ftr-list{
-    margin: 2rem 0;
-  }
- .accordion{
+}
+
+.card-body ul {
+    padding: 0rem 1rem;
+    color: #63392C;
    
- } 
+}
+
+.more {
+    padding: 10px;
+    display: none;
+}
+p{
+    color: #63392C;
+    font-weight: 400;
+}
+.ftr-list {
+    /* margin: 2rem 0; */
+}
+.but button.active {
+    position: relative;
+}
+
+.but button.active:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -17px; /* Adjust this value to change the distance of the underline from the text */
+    width: 100%;
+    height: 1px; /* Adjust this value to change the thickness of the underline */
+    background-color: #63392C; /* Adjust this value to change the color of the underline */
+}
+.fil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 .5rem;
+}
+ input[type="checkbox"] {
+    width: 1rem; /* Set the width of the checkbox */
+    height: 1rem; /* Set the height of the checkbox */
+    color: #63392C;
+    
+}
+input[type="radio"] {
+    width: 1rem; /* Set the width of the checkbox */
+    height: 1rem; /* Set the height of the checkbox */
+    color: #63392C;
+}
+.prdct1-flex{
+    display: flex;
+    justify-content: center;
+    gap:28rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
 @media only screen and (max-width: 500px) {
-    .video{
-       
+    .prdct1-flex{
+        
+        gap:2rem;
+    }
+    .video {
         height: 30rem;
         width: 25rem;
     }
-    .cl-flex{
+
+    .cl-flex {
         justify-content: left;
     }
-    .sl-flex{
-        gap:0rem;
+
+    .sl-flex {
+        gap: 0rem;
         justify-content: left;
     }
-    .sl-flex input{
+
+    .sl-flex input {
         width: 18rem;
     }
-    .prct-img{
+
+    .prct-img {
         height: 23rem;
         width: 23rem;
     }
-    .prdct-flex{
-        
+
+    .prdct-flex {
         margin: 2rem 0rem;
     }
-    /* user.html */
-    .log-div{
-       
+
+    .log-div {
         padding: 3rem 1rem;
     }
-    .log-bt{
+
+    .log-bt {
         padding: 1rem 6rem;
     }
-    .log-bt1{
+
+    .log-bt1 {
         padding: 1rem 7rem;
     }
-    .log-a1{
-        padding: .8rem 4.5rem;
-    }
-    .log-a2{
-        padding: .8rem 7rem;
-    }
-    .log-a3{
-        padding: .8rem 4rem;
+
+    .log-a1 {
+        padding: 0.8rem 4.5rem;
     }
 
-    .log-a4{
-        padding: .8rem 7.5rem;
+    .log-a2 {
+        padding: 0.8rem 7rem;
     }
-    .cl-flex1 input{
-        width:8rem;
+
+    .log-a3 {
+        padding: 0.8rem 4rem;
     }
-    .cl-flex1 label{
+
+    .log-a4 {
+        padding: 0.8rem 7.5rem;
+    }
+
+    .cl-flex1 input {
+        width: 8rem;
+    }
+
+    .cl-flex1 label {
         font-size: 13px;
     }
-    .cl-bt{
-        padding: .7rem 2.6rem;
 
+    .cl-bt {
+        padding: 0.7rem 2.6rem;
     }
-    .font{
-        
+
+    .font {
         font-size: 25px;
-        
     }
-    .pd{
+
+    .pd {
         padding: 0rem;
         border-right: none;
         margin-bottom: 2rem;
     }
-    form h1{
+
+    form h1 {
         font-size: 1.2rem;
     }
-    form h3{
-        font-size: .8rem;
+
+    form h3 {
+        font-size: 0.8rem;
     }
 }
