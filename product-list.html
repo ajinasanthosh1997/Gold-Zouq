@@ -242,8 +242,8 @@
         
     </div>  
     <section>
-        <div style="display: flex;justify-content: left;gap:4rem;flex-wrap: wrap;margin: 2rem 4rem;">
-            <div class="accordion" style=" border: 1px solid rgb(219, 218, 218);border-radius: .2rem;padding: 1rem 1rem;">
+        <div class="flex1">
+            <div class="accordion" style=" border: 1px solid rgb(219, 218, 218);border-radius: .2rem;padding: 1rem 2rem;">
                 <div class="fil" style="border-bottom: 1px solid rgb(240, 239, 239);">
                     <div>
                         <h3>Filter</h3>
@@ -326,7 +326,7 @@
                         </ul>
                     </div>
                 </div>
-                <hr style="border: 1px solid rgb(240, 239, 239);">
+                <hr style="border: 1px solid rgb(240, 239, 239);transition: all 1s ease-in;">
                 <div class="card12 ftrlist">
                     <div class="card-header" onclick="toggleAccordion(this)">
                         <p>Metal Color</p>
@@ -342,47 +342,36 @@
                     </div>
                 </div>
                 <hr style="border: 1px solid rgb(240, 239, 239);">
-                <div class="card12 ftrlist">
-                    <div class="card-header" onclick="toggleAccordion(this)">
-                        <p>Gift by Occasion</p>
-                        <span class="toggle-icon fa fa-plus"></span>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><input type="checkbox" id="wedding"> <label for="wedding">Wedding</label></li>
-                            <li><input type="checkbox" id="gifting"> <label for="gifting">Gifting</label></li>
-                            <li><input type="checkbox" id="office"> <label for="office">Office</label></li>
-                            <li><input type="checkbox" id="engagement"> <label for="engagement">Engagement</label></li>
-                            <li><input type="checkbox" id="valentinesDay"> <label for="valentinesDay">Valentine's Day</label></li>
-                        </ul>
-                    </div>
-                </div>
+                
                 
                 <!-- Add more accordion items as needed -->
             </div>
             <script>
                 function toggleAccordion(header) {
-                  const body = header.nextElementSibling;
-                  const icon = header.querySelector('.toggle-icon');
-                  const more = body.nextElementSibling;
-              
-                  if (body.style.display === 'block') {
-                    body.style.display = 'none';
-                    icon.classList.remove('fa-minus');
-                    icon.classList.add('fa-plus');
-                    more.style.display = 'block';
-                  } else {
-                    body.style.display = 'block';
-                    icon.classList.remove('fa-plus');
-                    icon.classList.add('fa-minus');
-                    more.style.display = 'none';
-                  }
+                    const body = header.nextElementSibling;
+                    const icon = header.querySelector('.toggle-icon');
+            
+                    if (body.style.display === 'block') {
+                        body.style.display = 'none';
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        body.style.display = 'block';
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
                 }
             </script>
             <div >
                 <div>
-                    <a href="#">GOLD</a>
+                    <a href="#" class="pr-bt">GOLD<button class="close-button" onclick="closeFunction()">Close</button></a>
                 </div>
+                <script>
+                    function closeFunction() {
+                        // Add your close functionality here
+                        console.log("Close button clicked");
+                    }
+                </script>
                 <div class="prdct1-flex">
                     <p>Showing 1-218 products of 218 products</p>
                     <div>
@@ -391,8 +380,61 @@
                     </div>
                 </div>
                 <hr style="border: 1px solid rgb(240, 239, 239);">
-                
+                <div>
+                    <div class="pr-flex">
+                        <div class="card" style="padding: 1rem;">
+                            <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
+                            <div >
+                                <img src="assets/img/Mahila_Jewellers.jpg"  style="height: 3rem;padding: 1rem 3rem;">
+                            </div>
+                            <p>Rudraksha Gold Bracelet...</p>
+                            <h3 style="color: #63392C;">4.080 gm</h3>
+                        </div>
+                        <div class="card" style="padding: 1rem;">
+                            <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
+                            <div >
+                                <img src="assets/img/logo-png_T0chbRA.png"  style="height: 3rem;padding: 1rem 3rem;">
+                            </div>
+                            <p>Diamond engagement ring...</p>
+                            <h3 style="color: #63392C;">6.000 gm</h3>
+                        </div>
+                        <div class="card" style="padding: 1rem;">
+                            <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
+                            <div >
+                                <img src="assets/img/logo_-_chungath_jewellery.png"  style="height: 3rem;padding: 1rem 3rem;">
+                            </div>
+                            <p>Minimal Holy Cross Pendant...</p>
+                            <h3 style="color: #63392C;">6.460 gm</h3>
+                        </div>
+                        <div class="card" style="padding: 1rem;">
+                            <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
+                            <div >
+                                <img src="assets/img/logo-png_T0chbRA.png"  style="height: 3rem;padding: 1rem 3rem;">
+                            </div>
+                            <p>Diamond engagement ring...</p>
+                            <h3 style="color: #63392C;">6.000 gm</h3>
+                        </div>
+                        <div class="card" style="padding: 1rem;">
+                            <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
+                            <div >
+                                <img src="assets/img/logo_-_chungath_jewellery.png"  style="height: 3rem;padding: 1rem 3rem;">
+                            </div>
+                            <p>Minimal Holy Cross Pendant...</p>
+                            <h3 style="color: #63392C;">6.460 gm</h3>
+                        </div>
+                        <div class="card" style="padding: 1rem;">
+                            <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
+                            <div >
+                                <img src="assets/img/Mahila_Jewellers.jpg"  style="height: 3rem;padding: 1rem 3rem;">
+                            </div>
+                            <p>Rudraksha Gold Bracelet...</p>
+                            <h3 style="color: #63392C;">4.080 gm</h3>
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
+            
         </div>
     </section>   
     
