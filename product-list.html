@@ -18,7 +18,7 @@
 
 </head>
 <body>
-    <header id="hd">
+    <header id="hd" style="">
         <div class="flex">
             <div>
                 <a href="index.html"><img src="assets/img/gold-zouq_1.svg" class="hd-img"></a>
@@ -177,21 +177,38 @@
 
         </div>
         <script>
+            // Show the default content (gold) when the page loads
+            // Show the default content (gold) when the page loads for both main and responsive navigation
+            
+            // Get the screen width
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            // Check if the screen width is greater than a specific value (e.g., 600px)
+            if (screenWidth > 600) {
+                showContent('gold', 'main');
+            }
+
+            // Optionally, you can also hide the toggle button on page load for smaller screens
+            // var toggleBtn = document.getElementById("toggleBtn");
+            // if (screenWidth <= 600) {
+            //     toggleBtn.style.display = "none";
+            // }
+            
             function showContent(contentType, navType) {
-                // Remove the 'selected' class from all nav-links (Responsive Navigation)
+                // Remove the 'selected' class from all nav-links (Main Navigation)
                 document.querySelectorAll('.nav-link').forEach(function (link) {
                     link.classList.remove('selected');
                 });
-        
-                // Add the 'selected' class to the clicked nav-link (Responsive Navigation)
-                var selectedLinkResponsive = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
-                selectedLinkResponsive.classList.add('selected');
-        
-                // Create the selected content dynamically (Responsive Navigation)
-                var selectedContentResponsive;
+
+                // Add the 'selected' class to the clicked nav-link (Main Navigation)
+                var selectedLink = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+                selectedLink.classList.add('selected');
+
+                // Create the selected content dynamically (Main Navigation)
+                var selectedContentMain;
                 switch (contentType) {
                     case 'gold':
-                        selectedContentResponsive = `
+                    selectedContentMain = `
                             <div style="margin-bottom: 20px;">Bangle</div>
                             <div style="margin-bottom: 20px;">Bracelet</div>
                             <div style="margin-bottom: 20px;">Chain</div>
@@ -202,13 +219,56 @@
                         `;
                         break;
                     case 'diamond':
+                        selectedContentMain = `
+                                <div style="margin-bottom: 20px;">Bangle</div>
+                                <div style="margin-bottom: 20px;">Bracelet</div>
+                                <div style="margin-bottom: 20px;">Pendant</div>
+                                <div style="margin-bottom: 20px;">Ring</div>
+                                <div style="margin-bottom: 20px;">Studs</div>
+                            `;
+                        break;
+                    case 'weddingRings':
+                        selectedContentMain = '<div style="margin-bottom: 20px;">Gold Ring</div><br>';
+                        break;
+                    default:
+                        selectedContentMain = '';
+                }
+
+                // Update the selected content area (Main Navigation)
+                var selectedContentAreaMain = document.getElementById('selectedContentMain');
+                selectedContentAreaMain.innerHTML = selectedContentMain;
+
+                // Remove the 'selected' class from all nav-links (Responsive Navigation)
+                document.querySelectorAll('.nav-link').forEach(function (link) {
+                    link.classList.remove('selected');
+                });
+
+                // Add the 'selected' class to the clicked nav-link (Responsive Navigation)
+                var selectedLinkResponsive = document.querySelector('.nav-link[href="#"][onclick="showContent(\'' + contentType + '\', \'' + navType + '\')"]');
+                selectedLinkResponsive.classList.add('selected');
+
+                // Create the selected content dynamically (Responsive Navigation)
+                var selectedContentResponsive;
+                switch (contentType) {
+                    case 'gold':
                         selectedContentResponsive = `
-                            <div style="margin-bottom: 20px;">Bangle</div>
-                            <div style="margin-bottom: 20px;">Bracelet</div>
-                            <div style="margin-bottom: 20px;">Pendant</div>
-                            <div style="margin-bottom: 20px;">Ring</div>
-                            <div style="margin-bottom: 20px;">Studs</div>
-                        `;
+                                <div style="margin-bottom: 20px;">Bangle</div>
+                                <div style="margin-bottom: 20px;">Bracelet</div>
+                                <div style="margin-bottom: 20px;">Chain</div>
+                                <div style="margin-bottom: 20px;">Necklace</div>
+                                <div style="margin-bottom: 20px;">Pendant</div>
+                                <div style="margin-bottom: 20px;">Ring</div>
+                                <div style="margin-bottom: 20px;">Studs</div>
+                            `;
+                        break;
+                    case 'diamond':
+                        selectedContentResponsive = `
+                                <div style="margin-bottom: 20px;">Bangle</div>
+                                <div style="margin-bottom: 20px;">Bracelet</div>
+                                <div style="margin-bottom: 20px;">Pendant</div>
+                                <div style="margin-bottom: 20px;">Ring</div>
+                                <div style="margin-bottom: 20px;">Studs</div>
+                            `;
                         break;
                     case 'weddingRings':
                         selectedContentResponsive = '<div style="margin-bottom: 20px;">Gold Ring</div>';
@@ -216,32 +276,29 @@
                     default:
                         selectedContentResponsive = '';
                 }
-        
+
                 // Update the selected content area (Responsive Navigation)
                 var selectedContentAreaResponsive = document.getElementById('selectedContentResponsive');
                 selectedContentAreaResponsive.innerHTML = selectedContentResponsive;
             }
         </script>
         <script>
-            // Close the side navigation when the page loads
-         
+              // Close the side navigation when the page loads
+              window.onload = function () {
+                closeNav();
+            };
+        
+            function toggleNav() {
+                document.getElementById("mySidenav").style.width = "100%";
+            }
+        
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
             }
-        
-            // Toggle the side navigation
-            function toggleNav() {
-                // Only open the side navigation when the button is clicked
-                document.getElementById("mySidenav").style.width = "100%";
-                
-                // Show the default content dynamically when the toggle screen is open
-                // showContent('gold', 'main');
-            }
         </script>
         
-        
-    </div>  
-    <section>
+    </div>   
+    <section id="content">
         <div class="flex1">
             <div class="accordion" style=" border: 1px solid rgb(219, 218, 218);border-radius: .2rem;padding: 1rem 2rem;">
                 <div class="fil" style="border-bottom: 1px solid rgb(240, 239, 239);">
@@ -363,8 +420,9 @@
                 }
             </script>
             <div >
-                <div>
-                    <a href="#" class="pr-bt">GOLD<button class="close-button" onclick="closeFunction()">Close</button></a>
+                <div class="p-bt">
+                    <a href="#" class="pr-bt">GOLD<button class="close-button" onclick="closeFunction()" style="color: white;">x</button></a>
+                    <a href="#" class="pr-bt">Bangle<button class="close-button" onclick="closeFunction()" style="color: white;">x</button></a>
                 </div>
                 <script>
                     function closeFunction() {
@@ -375,10 +433,21 @@
                 <div class="prdct1-flex">
                     <p>Showing 1-218 products of 218 products</p>
                     <div>
-                        <button>Trending</button>
-                        <button>Bridals</button>
+                        <button class="p-bt1" onclick="toggleButton(this)">Trending</button>
+                        <span>|</span>
+                        <button class="p-bt1" onclick="toggleButton(this)">Bridals</button>
                     </div>
                 </div>
+                <script>
+                    function toggleButton(button) {
+                        // Remove 'selected' class from all buttons in the same container
+                        const buttons = button.parentNode.querySelectorAll('.p-bt1');
+                        buttons.forEach(btn => btn.classList.remove('selected'));
+                
+                        // Add 'selected' class to the clicked button
+                        button.classList.add('selected');
+                    }
+                </script>
                 <hr style="border: 1px solid rgb(240, 239, 239);">
                 <div>
                     <div class="pr-flex">
@@ -437,7 +506,66 @@
             
         </div>
     </section>   
-    
+    <section id="content2">
+        <div>
+            <div class="fil">
+                <div><i class="fa-solid fa-filter"></i>Filter</div>
+                <div><i class="fa-solid fa-arrow-up-wide-short"></i>Sort</div>
+            </div>
+        </div>
+        <div style="margin-top: 1rem;">
+            <div class="pr-flex">
+                <div class="card" style="padding: 1rem;">
+                    <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
+                    <div >
+                        <img src="assets/img/Mahila_Jewellers.jpg"  style="height: 3rem;padding: 1rem 3rem;">
+                    </div>
+                    <p>Rudraksha Gold Bracelet...</p>
+                    <h3 style="color: #63392C;">4.080 gm</h3>
+                </div>
+                <div class="card" style="padding: 1rem;">
+                    <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
+                    <div >
+                        <img src="assets/img/logo-png_T0chbRA.png"  style="height: 3rem;padding: 1rem 3rem;">
+                    </div>
+                    <p>Diamond engagement ring...</p>
+                    <h3 style="color: #63392C;">6.000 gm</h3>
+                </div>
+                <div class="card" style="padding: 1rem;">
+                    <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
+                    <div >
+                        <img src="assets/img/logo_-_chungath_jewellery.png"  style="height: 3rem;padding: 1rem 3rem;">
+                    </div>
+                    <p>Minimal Holy Cross Pendant...</p>
+                    <h3 style="color: #63392C;">6.460 gm</h3>
+                </div>
+                <div class="card" style="padding: 1rem;">
+                    <img src="assets/img/Diamond_engagement_rings_for_couples_with_names_-_TSDDR001.webp" style="height: 16rem;width: 14rem;" class="h">
+                    <div >
+                        <img src="assets/img/logo-png_T0chbRA.png"  style="height: 3rem;padding: 1rem 3rem;">
+                    </div>
+                    <p>Diamond engagement ring...</p>
+                    <h3 style="color: #63392C;">6.000 gm</h3>
+                </div>
+                <div class="card" style="padding: 1rem;">
+                    <img src="assets/img/GZGP038_-_Made_with_Clipchamp_-_frame_at_0m13s.webp" style="height: 16rem;width: 14rem;" class="h">
+                    <div >
+                        <img src="assets/img/logo_-_chungath_jewellery.png"  style="height: 3rem;padding: 1rem 3rem;">
+                    </div>
+                    <p>Minimal Holy Cross Pendant...</p>
+                    <h3 style="color: #63392C;">6.460 gm</h3>
+                </div>
+                <div class="card" style="padding: 1rem;">
+                    <img src="assets/img/GZDS026_-_Made_with_Clipchamp_-_frame_at_0m1s_z6aINVH.webp" style="height: 16rem;width: 14rem;" class="h">
+                    <div >
+                        <img src="assets/img/Mahila_Jewellers.jpg"  style="height: 3rem;padding: 1rem 3rem;">
+                    </div>
+                    <p>Rudraksha Gold Bracelet...</p>
+                    <h3 style="color: #63392C;">4.080 gm</h3>
+                </div>
+            </div>
+
+    </section>
  
     <div id="res1" style="background-color: #F9EFE1; padding: .4rem .2rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
         <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
