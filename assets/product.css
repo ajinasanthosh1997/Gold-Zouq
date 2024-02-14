@@ -446,14 +446,9 @@ input[type="radio"] {
 .mr{
     margin: 2rem 6rem;
 }
-#Filter {
-    width: 0;
-    overflow-x: hidden;
-    transition: width 0.5s ease;
-}
-
-#Filter.filter-panel-open {
-    width: 100%;
+.filter-panel {
+    display: none;
+    /* Other styling properties */
 }
 @media only screen and (max-width: 500px) {
     .mr{
