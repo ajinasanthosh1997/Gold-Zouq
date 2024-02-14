@@ -329,6 +329,7 @@ form{
     display: flex;
     justify-content: center;
     gap: 3rem;
+    margin-bottom: 2.5rem;
 }
 .sec2 a{
     text-decoration: none;
@@ -425,7 +426,9 @@ footer h4{
 .h:hover{
     filter: brightness(0.5);
 }
-
+.home-flex{
+    display: flex;flex-wrap:wrap;justify-content: center;gap:2rem;text-align: left;margin-top: 2rem;
+}
 #green{
     display: block;
 }
@@ -548,6 +551,12 @@ img {
     justify-content: left;
     gap:1rem;
 }
+.hm-img{
+    height: 3rem;padding: 1rem 3rem;
+}
+.hm-img1{
+    height: 16rem;width: 14rem;
+}
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
@@ -557,6 +566,27 @@ img {
 }   
     /* Adjust the styles for smaller screens */
 @media only screen and (max-width: 500px) {
+    .hm-img1{
+        height: 10rem;width: 14rem;
+    }
+    p {
+        color: #63392C;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .hm-img {
+        height: 2rem;
+        width: 4rem;
+        padding: .5rem 2.1rem;
+    }
+    .home-flex{
+        margin: 0 1rem;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        /* gap: 1rem; */
+        margin-top: -1rem;
+    }
     .ch{
         display: block;
         padding: 0 0;
