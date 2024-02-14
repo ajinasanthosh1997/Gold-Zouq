@@ -451,7 +451,7 @@ input[type="radio"] {
     font-size: 20px;
     cursor: pointer;
 }
-.sidenav1 {
+.sidetoggle {
     height: 100%;
     width: 0;
     position: fixed;
@@ -463,7 +463,7 @@ input[type="radio"] {
     transition: 0.5s;
 }
 
-.sidenav1 a {
+.sidetoggle a {
     padding: 8px 1px 8px 32px;
     text-decoration: none;
     /* font-size: 26px; */
@@ -474,7 +474,35 @@ input[type="radio"] {
 
 
 
-.sidenav1 .closebtn1 {
+.sidetoggle .closebtn1 {
+    
+    font-size: 38px;
+    
+}
+.side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#F9EFE1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side a {
+    padding: 8px 1px 8px 32px;
+    text-decoration: none;
+    /* font-size: 26px; */
+    display: block;
+    transition: 0.3s;
+    color: #63392C;
+}
+
+
+
+.side .closebtn2 {
     
     font-size: 38px;
     

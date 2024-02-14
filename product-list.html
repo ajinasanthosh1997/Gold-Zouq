@@ -517,10 +517,10 @@
     <section id="content2" class="pr-sec">
         <div>
             <div class="fil" style="border-bottom: 1px solid #e1e1e1;">
-                <div class="filter-btn" id="toggleBtn1" onclick="toggleNav1()" style="padding: 1rem 3rem;border-right: 1px solid rgb(231, 229, 229);">
+                <div class="filter-btn" id="toggleBtn1" onclick="toggle()" style="padding: 1rem 3rem;border-right: 1px solid rgb(231, 229, 229);">
                     <i class="fa-solid fa-filter" style="color: #63392C;"></i>Filter
                 </div>
-                <div class="sort-option" style="color: #63392C;padding: 1rem 3rem;">
+                <div class="sort-option" id="toggleBtn2" onclick="toggle1()" style="color: #63392C;padding: 1rem 3rem;">
                     <i class="fa-solid fa-arrow-up-wide-short" style="color: #63392C;"></i>Sort
                 </div>
             </div>
@@ -578,12 +578,36 @@
                 </div>
             </div>
         </div>
-        <div class="sidenav1" id="mySidenav1"  style="">
+        <div class="side" id="mySideSort"  style="">
+            <div style="display: flex;align-items: center;justify-content: space-between;padding: 0 1rem;">
+                <div>Sort</div>
+                <div>
+                    <a href="javascript:void(0)" class="closebtn2" onclick="closeSort()">&times;</a>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li><input type="radio" name="all" id="all"> <label for="all">All</label></li>
+                    <li><input type="radio" name="trending" id="trending"> <label for="trending">Trending</label></li>
+                    <li><input type="radio" name="bridals" id="bridals"> <label for="bridals">Bridals</label></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function toggle1() {
+                document.getElementById("mySideSort").style.width = "300px";
+                console.log('hello')
+            }
+            function closeSort() {
+                document.getElementById("mySideSort").style.width = "0";
+            }
+        </script>
+        <div class="sidetoggle" id="mySidetoggle"  style="">
             <div>
                 <div style="display: flex;align-items: center;justify-content: space-between;padding: 0 1rem;">
                     <div>Filter</div>
                     <div>
-                        <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">&times;</a>
+                        <a href="javascript:void(0)" class="closebtn1" onclick="closeToggle()">&times;</a>
                     </div>
                     
                 </div>
@@ -684,12 +708,12 @@
         </div>
     </section>
     <script>
-        function toggleNav1() {
-            document.getElementById("mySidenav1").style.width = "300px";
+        function toggle() {
+            document.getElementById("mySidetoggle").style.width = "300px";
             console.log('hello')
         }
-        function closeNav1() {
-            document.getElementById("mySidenav1").style.width = "0";
+        function closeToggle() {
+            document.getElementById("mySidetoggle").style.width = "0";
         }
     </script>
     
