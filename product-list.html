@@ -507,12 +507,12 @@
         </div>
     </section>   
     <section id="content2" class="pr-sec">
-        <div >
+        <div>
             <div class="fil" style="border-bottom: 1px solid #e1e1e1;">
                 <div class="filter-option" style="color: #63392C;">
-                    <i class="fa-solid fa-filter" style="color: #63392C;"></i>Filter
+                    <i class="fa-solid fa-filter" style="color: #63392C;" id="toggleBtn1" onclick="toggleNav1()"></i>Filter
                 </div>
-                
+
                 <div class="sort-option" style="color: #63392C;">
                     <i class="fa-solid fa-arrow-up-wide-short" style="color: #63392C;"></i>Sort
                 </div>
@@ -570,8 +570,139 @@
                     <h3 style="color: #63392C;">4.080 gm</h3>
                 </div>
             </div>
-
+        </div>
+        <div id="Filter">
+            <div>
+                <div>Filter</div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+            </div>
+            <div class="">
+                <div class="" onclick="toggleAccordion(this)">
+                    <p>Gender</p>
+                    <span class="toggle-icon fa fa-plus"></span>
+                </div>
+                <div class="">
+                    <ul>
+                        <li><input type="checkbox" id="men"> <label for="men">Men</label></li>
+                        <li><input type="checkbox" id="women"> <label for="women">Women</label></li>
+                        <li><input type="checkbox" id="kids"> <label for="kids">Kids</label></li>
+                        <li><input type="checkbox" id="newborn"> <label for="newborn">New Born</label></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(240, 239, 239);">
+            <div class="">
+                <div class="" onclick="toggleAccordion(this)">
+                    <p>Brand</p>
+                    <span class="toggle-icon fa fa-plus"></span>
+                </div>
+                <div class="">
+                    <ul>
+                        <li><input type="checkbox" id="brand1"> <label for="brand1">Chungath Jewellery</label></li>
+                        <li><input type="checkbox" id="brand2"> <label for="brand2">Jos Jewellery</label></li>
+                        <li><input type="checkbox" id="brand3"> <label for="brand3">Vellanikaran Gold and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diamonds</label></li>
+                        <li><input type="checkbox" id="brand4"> <label for="brand4">Akkara Jewellers</label></li>
+                        <li><input type="checkbox" id="brand5"> <label for="brand5">Mahila Jewellers</label></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(240, 239, 239);">
+            <div class="">
+                <div class="" onclick="toggleAccordion(this)">
+                    <p>Collections</p>
+                    <span class="toggle-icon fa fa-plus"></span>
+                </div>
+                <div class="">
+                    <ul>
+                        <li><input type="radio" name="collection" id="gold"> <label for="gold">GOLD</label></li>
+                        <li><input type="radio" name="collection" id="weddingRings"> <label for="weddingRings">WEDDING RINGS</label></li>
+                        <li><input type="radio" name="collection" id="diamond"> <label for="diamond">DIAMOND</label></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(240, 239, 239);">
+            <div class="">
+                <div class="" onclick="toggleAccordion(this)">
+                    <p>Categories</p>
+                    <span class="toggle-icon fa fa-plus"></span>
+                </div>
+                <div class="">
+                    <ul>
+                        <li><input type="checkbox" id="ring"> <label for="ring">Ring</label></li>
+                        <li><input type="checkbox" id="pendant"> <label for="pendant">Pendant</label></li>
+                        <li><input type="checkbox" id="bangle"> <label for="bangle">Bangle</label></li>
+                        <li><input type="checkbox" id="bracelet"> <label for="bracelet">Bracelet</label></li>
+                        <li><input type="checkbox" id="studs"> <label for="studs">Studs</label></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(240, 239, 239);">
+            <div class="">
+                <div class="" onclick="toggleAccordion(this)">
+                    <p>Gold Purity</p>
+                    <span class="toggle-icon fa fa-plus"></span>
+                </div>
+                <div class="">
+                    <ul>
+                        <li><input type="checkbox" id="gold24CT"> <label for="gold24CT">24 CT</label></li>
+                        <li><input type="checkbox" id="gold22CT"> <label for="gold22CT">22 CT</label></li>
+                        <li><input type="checkbox" id="gold18CT"> <label for="gold18CT">18 CT</label></li>
+                        <li><input type="checkbox" id="gold14CT"> <label for="gold14CT">14 CT</label></li>
+                        <li><input type="checkbox" id="gold95CT"> <label for="gold95CT">95.00 CT</label></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(240, 239, 239);transition: all 1s ease-in;">
+            <div class="">
+                <div class="" onclick="toggleAccordion(this)">
+                    <p>Metal Color</p>
+                    <span class="toggle-icon fa fa-plus"></span>
+                </div>
+                <div class="">
+                    <ul>
+                        <li><input type="checkbox" id="white"> <label for="white">White</label></li>
+                        <li><input type="checkbox" id="rose"> <label for="rose">Rose</label></li>
+                        <li><input type="checkbox" id="yellow"> <label for="yellow">Yellow</label></li>
+                        <li><input type="checkbox" id="dualTone"> <label for="dualTone">Dual Tone</label></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px solid rgb(240, 239, 239);">
+            
+            
+            <!-- Add more accordion items as needed -->
+        
+            <script>
+                function toggleAccordion(header) {
+                    const body = header.nextElementSibling;
+                    const icon = header.querySelector('.toggle-icon');
+            
+                    if (body.style.display === 'block') {
+                        body.style.display = 'none';
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        body.style.display = 'block';
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
+                }
+            </script>
+            
+        </div>
+        
+        
     </section>
+    <script>
+        function toggleNav1() {
+            var filterPanel = document.getElementById("Filter");
+            filterPanel.classList.toggle("filter-panel-open");
+        }
+    
+        function closeNav1() {
+            document.getElementById("Filter").classList.remove("filter-panel-open");
+        }
+    </script>
     <section class="mr">
         <img src="assets/img/pastel_green_and_white_banner_1220X350.webp">
     </section>
