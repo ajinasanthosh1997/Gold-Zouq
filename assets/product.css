@@ -446,9 +446,38 @@ input[type="radio"] {
 .mr{
     margin: 2rem 6rem;
 }
-.filter-panel {
-    display: none;
-    /* Other styling properties */
+
+#toggleBtn1 {
+    font-size: 20px;
+    cursor: pointer;
+}
+.sidenav1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#F9EFE1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav1 a {
+    padding: 8px 1px 8px 32px;
+    text-decoration: none;
+    /* font-size: 26px; */
+    display: block;
+    transition: 0.3s;
+    color: #63392C;
+}
+
+
+
+.sidenav1 .closebtn1 {
+    
+    font-size: 38px;
+    
 }
 @media only screen and (max-width: 500px) {
     .mr{

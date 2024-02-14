@@ -557,6 +557,7 @@ img {
 .hm-img1{
     height: 16rem;width: 14rem;
 }
+
 @media only screen and (max-width: 800px) {
     #hd{
         display: none;
