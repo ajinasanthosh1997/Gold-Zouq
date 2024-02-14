@@ -443,7 +443,13 @@ input[type="radio"] {
 .pr-sec{
     margin: 1rem 1rem;
 }
+.mr{
+    margin: 2rem 6rem;
+}
 @media only screen and (max-width: 500px) {
+    .mr{
+        margin: 2rem 2rem;
+    }
     .pr-img1{
         height: 10rem;width: 14rem;
     }
