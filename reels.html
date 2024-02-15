@@ -109,7 +109,7 @@
         }
         .reel-bt{
             position: absolute;
-            top: 40rem;
+            top: 30rem;
             left: 20.5rem;
         }
     </style>
@@ -633,7 +633,7 @@
                     <button onclick="likeVideo('video14')" class="like-button"><i class="fas fa-heart"></i></button>
                     <button onclick="shareVideo('video14')" class="share-button"><i class="fas fa-share"></i></button>
                 </div>
-                <button class="close-button" onclick="closeVideo('video14')"><i class="fas fa-times"></i></button>
+                <button class="close-button" data-overlay-id="14"><i class="fas fa-times"></i></button>
                 <div id="res1" style="background-color: #F9EFE1; padding: .4rem .2rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
                     <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
                         <div>
@@ -670,7 +670,7 @@
                     <button onclick="likeVideo('video15')" class="like-button"><i class="fas fa-heart"></i></button>
                     <button onclick="shareVideo('video15')" class="share-button"><i class="fas fa-share"></i></button>
                 </div>
-                <button class="close-button" onclick="closeVideo('video15')"><i class="fas fa-times"></i></button>
+                <button class="close-button" data-overlay-id="15"><i class="fas fa-times"></i></button>
                 <div id="res1" style="background-color: #F9EFE1; padding: .4rem .2rem ; position: fixed; bottom: 0; width: 100%;z-index: 1;">
                     <div style="display: flex; justify-content: space-around;align-items: center;text-align: center;">
                         <div>
@@ -701,6 +701,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <!-- ... Your existing HTML ... -->
 
+    
 <script>
     function playVideo(videoUrl) {
         // Stop any currently playing videos and hide their overlays
@@ -731,10 +732,10 @@
         });
     }
 
-    function closeVideo(videoId) {
+    function closeOverlay(overlayId) {
         // Stop the video and hide its overlay
-        const overlay = document.getElementById(`overlay${videoId.charAt(videoId.length - 1)}`);
-        const videoElement = document.getElementById(`video${videoId.charAt(videoId.length - 1)}`);
+        const overlay = document.getElementById(`overlay${overlayId}`);
+        const videoElement = document.getElementById(`video${overlayId}`);
 
         videoElement.pause();
         overlay.style.display = 'none';
@@ -758,6 +759,15 @@
         // Implement your share functionality here
         alert(`Shared video ${videoId}`);
     }
+
+    // Add event listeners for close buttons
+    const closeButtons = document.querySelectorAll('.close-button');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const overlayId = button.dataset.overlayId;
+            closeOverlay(overlayId);
+        });
+    });
 </script>
 
 </body>
