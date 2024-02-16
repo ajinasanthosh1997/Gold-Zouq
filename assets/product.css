@@ -515,7 +515,19 @@ input[type="radio"] {
     font-size: 38px;
     
 }
+.terms h1{
+    font-family: 'Switzer-Light';font-size: 3rem;color: #63392C;
+}
+.terms{
+    margin: 2rem 8rem;line-height: 2rem;
+}
 @media only screen and (max-width: 500px) {
+    .terms{
+        margin: 2rem 1rem;
+    }
+    .terms h1{
+        font-size: 2rem;
+    }
     .mr{
         margin: 2rem 2rem;
     }

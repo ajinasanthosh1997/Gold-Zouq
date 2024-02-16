@@ -100,7 +100,10 @@ body div,p{
     background-clip: text;
     -webkit-background-clip: text;
 }
-
+#ft a{
+    text-decoration: none;
+    color: white;
+}
 .nav-link1::after {
     content: "";
     position: absolute;
