@@ -527,6 +527,7 @@ input[type="radio"] {
     }
     .terms h1{
         font-size: 2rem;
+        font-family: 'Switzer-Light';
     }
     .mr{
         margin: 2rem 2rem;
